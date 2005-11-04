@@ -1,0 +1,56 @@
+<Type Name="EditorTableType" FullName="Gladeui.EditorTableType">
+  <TypeSignature Language="C#" Value="public enum EditorTableType" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Members>
+    <Member MemberName="General">
+      <MemberSignature Language="C#" Value="General" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.EditorTableType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="Query" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.EditorTableType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Common">
+      <MemberSignature Language="C#" Value="Common" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.EditorTableType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Packing">
+      <MemberSignature Language="C#" Value="Packing" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.EditorTableType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

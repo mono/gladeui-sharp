@@ -1,0 +1,38 @@
+<Type Name="ConfigureBeginArgs" FullName="Gladeui.ConfigureBeginArgs">
+  <TypeSignature Language="C#" Value="public class ConfigureBeginArgs : GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigureBeginArgs ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arg2">
+      <MemberSignature Language="C#" Value="public Gladeui.Widget Arg2 { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.Widget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

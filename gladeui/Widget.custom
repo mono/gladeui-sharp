@@ -1,0 +1,7 @@
+
+	public static Gladeui.Widget FromObject (GLib.Object obj)
+	{
+		IntPtr ptr = ((Gtk.Widget)obj).GetData ("GladeWidgetDataTag");
+		return (Gladeui.Widget) GLib.Object.GetObject (ptr);
+	}
+	

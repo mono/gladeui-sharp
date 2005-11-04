@@ -1,0 +1,36 @@
+<Type Name="UtilFileDialogType" FullName="Gladeui.UtilFileDialogType">
+  <TypeSignature Language="C#" Value="public enum UtilFileDialogType" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Members>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="Save" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.UtilFileDialogType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="Open" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.UtilFileDialogType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,346 @@
+<Type Name="FixedManager" FullName="Gladeui.FixedManager">
+  <TypeSignature Language="C#" Value="public class FixedManager : GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FixedManager (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete(Message=null, IsError=False)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="gtype" Type="GLib.GType" />
+      </Parameters>
+      <Docs>
+        <param name="gtype">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FixedManager (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FixedManager ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildCreated">
+      <MemberSignature Language="C#" Value="public event Gladeui.ChildCreatedHandler ChildCreated;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="child-created")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.ChildCreatedHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureBegin">
+      <MemberSignature Language="C#" Value="public event Gladeui.ConfigureBeginHandler ConfigureBegin;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="configure-begin")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.ConfigureBeginHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveChild">
+      <MemberSignature Language="C#" Value="public event Gladeui.RemoveChildHandler RemoveChild;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="remove-child")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.RemoveChildHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChild">
+      <MemberSignature Language="C#" Value="public event Gladeui.CreateChildHandler CreateChild;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="create-child")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.CreateChildHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureEnd">
+      <MemberSignature Language="C#" Value="public event Gladeui.ConfigureEndHandler ConfigureEnd;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="configure-end")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.ConfigureEndHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureChild">
+      <MemberSignature Language="C#" Value="public event Gladeui.ConfigureChildHandler ConfigureChild;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="configure-child")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.ConfigureChildHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="public event Gladeui.AddChildHandler AddChild;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="add-child")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.AddChildHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChildCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnChildCreated (Gladeui.Widget arg2);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConfigureBegin">
+      <MemberSignature Language="C#" Value="protected virtual void OnConfigureBegin (Gladeui.Widget arg2);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveChild">
+      <MemberSignature Language="C#" Value="protected virtual bool OnRemoveChild (Gladeui.Widget arg2);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateChild">
+      <MemberSignature Language="C#" Value="protected virtual Gladeui.Widget OnCreateChild (Gladeui.WidgetClass arg2);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.Widget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.WidgetClass" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConfigureEnd">
+      <MemberSignature Language="C#" Value="protected virtual void OnConfigureEnd (Gladeui.Widget arg2);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConfigureChild">
+      <MemberSignature Language="C#" Value="protected virtual bool OnConfigureChild (Gladeui.Widget arg2, Gdk.Rectangle arg3);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.Widget" />
+        <Parameter Name="arg3" Type="Gdk.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <param name="arg3">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAddChild">
+      <MemberSignature Language="C#" Value="protected virtual bool OnAddChild (Gladeui.Widget arg2);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg2" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="arg2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XProp">
+      <MemberSignature Language="C#" Value="public string XProp { get; };" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property(Name="x_prop")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeightProp">
+      <MemberSignature Language="C#" Value="public string HeightProp { get; };" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property(Name="height_prop")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YProp">
+      <MemberSignature Language="C#" Value="public string YProp { get; };" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property(Name="y_prop")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthProp">
+      <MemberSignature Language="C#" Value="public string WidthProp { get; };" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property(Name="width_prop")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

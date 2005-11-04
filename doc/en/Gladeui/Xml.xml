@@ -1,0 +1,270 @@
+<Type Name="Xml" FullName="Gladeui.Xml">
+  <TypeSignature Language="C#" Value="public class Xml" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Xml ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public static void SetValue (Gladeui.XmlNode node, string name, string val);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="val" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="val">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchChildRequired">
+      <MemberSignature Language="C#" Value="public static Gladeui.XmlNode SearchChildRequired (Gladeui.XmlNode tree, string name);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tree" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tree">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyBoolean">
+      <MemberSignature Language="C#" Value="public static bool GetPropertyBoolean (Gladeui.XmlNode node_in, string name, bool _default);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node_in" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="_default" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="node_in">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="_default">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchChild">
+      <MemberSignature Language="C#" Value="public static Gladeui.XmlNode SearchChild (Gladeui.XmlNode node, string name);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Gladeui.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueIntRequired">
+      <MemberSignature Language="C#" Value="public static bool GetValueIntRequired (Gladeui.XmlNode node, string name, out int val);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="val" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="val">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public static bool GetBoolean (Gladeui.XmlNode node, string name, bool _default);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="_default" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="_default">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueStringRequired">
+      <MemberSignature Language="C#" Value="public static string GetValueStringRequired (Gladeui.XmlNode node, string name, string xtra_info);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="xtra_info" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="xtra_info">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueString">
+      <MemberSignature Language="C#" Value="public static string GetValueString (Gladeui.XmlNode node, string name);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContent">
+      <MemberSignature Language="C#" Value="public static void SetContent (Gladeui.XmlNode node_in, string content);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node_in" Type="Gladeui.XmlNode" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node_in">To be added.</param>
+        <param name="content">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyStringRequired">
+      <MemberSignature Language="C#" Value="public static string GetPropertyStringRequired (Gladeui.XmlNode node_in, string name, string xtra);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node_in" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="xtra" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node_in">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="xtra">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueInt">
+      <MemberSignature Language="C#" Value="public static bool GetValueInt (Gladeui.XmlNode node, string name, out int val);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="val" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="val">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContent">
+      <MemberSignature Language="C#" Value="public static string GetContent (Gladeui.XmlNode node);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Gladeui.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyString">
+      <MemberSignature Language="C#" Value="public static string GetPropertyString (Gladeui.XmlNode node_in, string name);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node_in" Type="Gladeui.XmlNode" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node_in">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

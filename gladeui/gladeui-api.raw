@@ -1,0 +1,2472 @@
+<?xml version="1.0"?>
+<api>
+  <!--
+
+        This file was automatically generated.
+        Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
+
+-->
+  <namespace name="Glade" library="gladeui-sharp.dll">
+    <enum name="CursorType" cname="GladeCursorType" type="enum">
+      <member cname="GLADE_CURSOR_SELECTOR" name="Selector" />
+      <member cname="GLADE_CURSOR_ADD_WIDGET" name="AddWidget" />
+      <member cname="GLADE_CURSOR_RESIZE_TOP_LEFT" name="ResizeTopLeft" />
+      <member cname="GLADE_CURSOR_RESIZE_TOP_RIGHT" name="ResizeTopRight" />
+      <member cname="GLADE_CURSOR_RESIZE_BOTTOM_LEFT" name="ResizeBottomLeft" />
+      <member cname="GLADE_CURSOR_RESIZE_BOTTOM_RIGHT" name="ResizeBottomRight" />
+      <member cname="GLADE_CURSOR_RESIZE_LEFT" name="ResizeLeft" />
+      <member cname="GLADE_CURSOR_RESIZE_RIGHT" name="ResizeRight" />
+      <member cname="GLADE_CURSOR_RESIZE_TOP" name="ResizeTop" />
+      <member cname="GLADE_CURSOR_RESIZE_BOTTOM" name="ResizeBottom" />
+      <member cname="GLADE_CURSOR_DRAG" name="Drag" />
+    </enum>
+    <enum name="ProjectViewType" cname="GladeProjectViewType" type="enum">
+      <member cname="GLADE_PROJECT_VIEW_LIST" name="List" />
+      <member cname="GLADE_PROJECT_VIEW_TREE" name="Tree" />
+    </enum>
+    <enum name="CreateReason" cname="GladeCreateReason" type="enum">
+      <member cname="GLADE_CREATE_USER" name="User" />
+      <member cname="GLADE_CREATE_COPY" name="Copy" />
+      <member cname="GLADE_CREATE_LOAD" name="Load" />
+      <member cname="GLADE_CREATE_REBUILD" name="Rebuild" />
+      <member cname="GLADE_CREATE_REASONS" name="Reasons" />
+    </enum>
+    <enum name="EditorTableType" cname="GladeEditorTableType" type="enum">
+      <member cname="TABLE_TYPE_GENERAL" name="General" />
+      <member cname="TABLE_TYPE_COMMON" name="Common" />
+      <member cname="TABLE_TYPE_PACKING" name="Packing" />
+      <member cname="TABLE_TYPE_QUERY" name="Query" />
+    </enum>
+    <enum name="UtilFileDialogType" cname="GladeUtilFileDialogType" type="enum">
+      <member cname="GLADE_FILE_DIALOG_ACTION_OPEN" name="Open" />
+      <member cname="GLADE_FILE_DIALOG_ACTION_SAVE" name="Save" />
+    </enum>
+    <callback name="AddChildFunc" cname="GladeAddChildFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GObject*" name="parent" />
+        <parameter type="GObject*" name="child" />
+      </parameters>
+    </callback>
+    <callback name="ChildGetPropertyFunc" cname="GladeChildGetPropertyFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GObject*" name="container" />
+        <parameter type="GObject*" name="child" />
+        <parameter type="const-gchar*" name="property_name" />
+        <parameter type="GValue*" name="value" />
+      </parameters>
+    </callback>
+    <callback name="ChildSetPropertyFunc" cname="GladeChildSetPropertyFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GObject*" name="container" />
+        <parameter type="GObject*" name="child" />
+        <parameter type="const-gchar*" name="property_name" />
+        <parameter type="const-GValue*" name="value" />
+      </parameters>
+    </callback>
+    <callback name="GetChildrenFunc" cname="GladeGetChildrenFunc">
+      <return-type type="GList*" />
+      <parameters>
+        <parameter type="GObject*" name="container" />
+      </parameters>
+    </callback>
+    <callback name="GetInternalFunc" cname="GladeGetInternalFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GObject*" name="parent" />
+        <parameter type="const-gchar*" name="name" />
+        <parameter type="GObject**" name="child" />
+      </parameters>
+    </callback>
+    <callback name="PostCreateFunc" cname="GladePostCreateFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GObject*" name="gobject" />
+        <parameter type="GladeCreateReason" name="reason" />
+      </parameters>
+    </callback>
+    <callback name="RemoveChildFunc" cname="GladeRemoveChildFunc">
+      <return-type type="void" />
+      <parameters>
+        <parameter type="GObject*" name="parent" />
+        <parameter type="GObject*" name="child" />
+      </parameters>
+    </callback>
+    <object name="App" cname="GladeApp" parent="GObject">
+      <field name="Priv" cname="priv" type="GladeAppPriv*" />
+      <signal name="UpdateUi" cname="update-ui" when="FIRST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeApp*" name="app" />
+        </parameters>
+      </signal>
+      <virtual_method name="ShowProperties" cname="show_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeApp*" name="app" />
+          <parameter type="gboolean" name="raise" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="HideProperties" cname="hide_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeApp*" name="app" />
+        </parameters>
+      </virtual_method>
+      <method name="AddProject" cname="glade_app_add_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+      <method name="AddProjectView" cname="glade_app_add_project_view">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+        </parameters>
+      </method>
+      <method name="CommandCopy" cname="glade_app_command_copy">
+        <return-type type="void" />
+      </method>
+      <method name="CommandCut" cname="glade_app_command_cut">
+        <return-type type="void" />
+      </method>
+      <method name="CommandDelete" cname="glade_app_command_delete">
+        <return-type type="void" />
+      </method>
+      <method name="CommandPaste" cname="glade_app_command_paste">
+        <return-type type="void" />
+      </method>
+      <method name="CommandRedo" cname="glade_app_command_redo">
+        <return-type type="void" />
+      </method>
+      <method name="CommandUndo" cname="glade_app_command_undo">
+        <return-type type="void" />
+      </method>
+      <method name="ConfigSave" cname="glade_app_config_save">
+        <return-type type="gint" />
+      </method>
+      <method name="GetActiveProject" cname="glade_app_get_active_project">
+        <return-type type="GladeProject*" />
+      </method>
+      <method name="GetAddClass" cname="glade_app_get_add_class">
+        <return-type type="GladeWidgetClass*" />
+      </method>
+      <method name="GetAltClass" cname="glade_app_get_alt_class">
+        <return-type type="GladeWidgetClass*" />
+      </method>
+      <method name="GetClipboard" cname="glade_app_get_clipboard">
+        <return-type type="GladeClipboard*" />
+      </method>
+      <method name="GetClipboardView" cname="glade_app_get_clipboard_view">
+        <return-type type="GtkWidget*" />
+      </method>
+      <method name="GetConfig" cname="glade_app_get_config">
+        <return-type type="GKeyFile*" />
+      </method>
+      <method name="GetEditor" cname="glade_app_get_editor">
+        <return-type type="GladeEditor*" />
+      </method>
+      <method name="GetPalette" cname="glade_app_get_palette">
+        <return-type type="GladePalette*" />
+      </method>
+      <method name="GetProjects" cname="glade_app_get_projects">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetTransientParent" cname="glade_app_get_transient_parent">
+        <return-type type="GtkWindow*" />
+      </method>
+      <method name="GetType" cname="glade_app_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetWindow" cname="glade_app_get_window">
+        <return-type type="GtkWidget*" />
+      </method>
+      <method name="HideProperties" cname="glade_app_hide_properties">
+        <return-type type="void" />
+      </method>
+      <method name="IsProjectLoaded" cname="glade_app_is_project_loaded">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="project_path" />
+        </parameters>
+      </method>
+      <constructor cname="glade_app_new" />
+      <method name="RemoveProject" cname="glade_app_remove_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+      <method name="SetAccelGroup" cname="glade_app_set_accel_group">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkAccelGroup*" name="accel_group" />
+        </parameters>
+      </method>
+      <method name="SetProject" cname="glade_app_set_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+      <method name="SetTransientParent" cname="glade_app_set_transient_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWindow*" name="parent" />
+        </parameters>
+      </method>
+      <method name="SetWindow" cname="glade_app_set_window">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="window" />
+        </parameters>
+      </method>
+      <method name="ShowProperties" cname="glade_app_show_properties">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="raise" />
+        </parameters>
+      </method>
+      <method name="UpdateUi" cname="glade_app_update_ui">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="Clipboard" cname="GladeClipboard" parent="GObject">
+      <field name="Widgets" cname="widgets" type="GList*" />
+      <field name="Selection" cname="selection" type="GList*" />
+      <field name="View" cname="view" type="GtkWidget*" />
+      <method name="Add" cname="glade_clipboard_add">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="widgets" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_clipboard_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_clipboard_new" />
+      <method name="Remove" cname="glade_clipboard_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="widgets" />
+        </parameters>
+      </method>
+      <method name="SelectionAdd" cname="glade_clipboard_selection_add">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="SelectionClear" cname="glade_clipboard_selection_clear">
+        <return-type type="void" />
+      </method>
+      <method name="SelectionRemove" cname="glade_clipboard_selection_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+    </object>
+    <object name="ClipboardView" cname="GladeClipboardView" parent="GtkWindow">
+      <field name="Widget" cname="widget" type="GtkWidget*" />
+      <field name="Model" cname="model" type="GtkListStore*" />
+      <field name="Clipboard" cname="clipboard" type="GladeClipboard*" />
+      <field name="Updating" cname="updating" type="gboolean" />
+      <method name="Add" cname="glade_clipboard_view_add">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_clipboard_view_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_clipboard_view_new">
+        <parameters>
+          <parameter type="GladeClipboard*" name="clipboard" />
+        </parameters>
+      </constructor>
+      <method name="RefreshSel" cname="glade_clipboard_view_refresh_sel">
+        <return-type type="void" />
+      </method>
+      <method name="Remove" cname="glade_clipboard_view_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Command" cname="GladeCommand" parent="GObject">
+      <field name="Description" cname="description" type="gchar*" />
+      <virtual_method name="UndoCmd" cname="undo_cmd">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeCommand*" name="this" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ExecuteCmd" cname="execute_cmd">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeCommand*" name="this" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Unifies" cname="unifies">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeCommand*" name="this" />
+          <parameter type="GladeCommand*" name="other" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="Collapse" cname="collapse">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeCommand*" name="this" />
+          <parameter type="GladeCommand*" name="other" />
+        </parameters>
+      </virtual_method>
+      <method name="AddSignal" cname="glade_command_add_signal" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="glade_widget" />
+          <parameter type="const-GladeSignal*" name="signal" />
+        </parameters>
+      </method>
+      <method name="ChangeSignal" cname="glade_command_change_signal" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="glade_widget" />
+          <parameter type="const-GladeSignal*" name="old" />
+          <parameter type="const-GladeSignal*" name="new" />
+        </parameters>
+      </method>
+      <method name="Copy" cname="glade_command_copy" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="widgets" />
+        </parameters>
+      </method>
+      <method name="Create" cname="glade_command_create" shared="true">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="GladeWidgetClass*" name="widget_class" />
+          <parameter type="GladeWidget*" name="parent" />
+          <parameter type="GladePlaceholder*" name="placeholder" />
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+      <method name="Cut" cname="glade_command_cut" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="widgets" />
+        </parameters>
+      </method>
+      <method name="Delete" cname="glade_command_delete" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="widgets" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_command_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Paste" cname="glade_command_paste" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="widgets" />
+          <parameter type="GladeWidget*" name="parent" />
+          <parameter type="GladePlaceholder*" name="placeholder" />
+        </parameters>
+      </method>
+      <method name="Redo" cname="glade_command_redo" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+      <method name="RemoveSignal" cname="glade_command_remove_signal" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="glade_widget" />
+          <parameter type="const-GladeSignal*" name="signal" />
+        </parameters>
+      </method>
+      <method name="SetName" cname="glade_command_set_name" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="glade_widget" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="SetProperties" cname="glade_command_set_properties" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProperty*" name="property" />
+          <parameter type="const-GValue*" name="old_value" />
+          <parameter type="const-GValue*" name="new_value" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="SetPropertiesList" cname="glade_command_set_properties_list" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="GList*" name="props" />
+        </parameters>
+      </method>
+      <method name="SetProperty" cname="glade_command_set_property" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProperty*" name="property" />
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="Undo" cname="glade_command_undo" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Editor" cname="GladeEditor" parent="GtkVBox">
+      <field name="Notebook" cname="notebook" type="GtkWidget*" />
+      <field name="LoadedWidget" cname="loaded_widget" type="GladeWidget*" />
+      <field name="LoadedClass" cname="loaded_class" type="GladeWidgetClass*" />
+      <field name="VboxWidget" cname="vbox_widget" type="GtkWidget*" />
+      <field name="VboxPacking" cname="vbox_packing" type="GtkWidget*" />
+      <field name="VboxCommon" cname="vbox_common" type="GtkWidget*" />
+      <field name="VboxSignals" cname="vbox_signals" type="GtkWidget*" />
+      <field name="SignalEditor" cname="signal_editor" type="GladeSignalEditor*" />
+      <field name="WidgetTables" cname="widget_tables" type="GList*" />
+      <field name="Loading" cname="loading" type="gboolean" />
+      <virtual_method name="AddSignal" cname="add_signal">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeEditor*" name="editor" />
+          <parameter type="const-char*" name="id_widget" />
+          <parameter type="GType" name="type_widget" />
+          <parameter type="guint" name="id_signal" />
+          <parameter type="const-char*" name="callback_name" />
+        </parameters>
+      </virtual_method>
+      <method name="EditableProperty" cname="glade_editor_editable_property" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GParamSpec*" name="pspec" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_editor_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="LoadWidget" cname="glade_editor_load_widget">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <constructor cname="glade_editor_new" />
+      <method name="QueryDialog" cname="glade_editor_query_dialog">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="Refresh" cname="glade_editor_refresh">
+        <return-type type="void" />
+      </method>
+      <method name="UpdateWidgetName" cname="glade_editor_update_widget_name">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="FixedManager" cname="GladeFixedManager" parent="GObject">
+      <field name="Container" cname="container" type="GladeWidget*" />
+      <field name="XProp" cname="x_prop" type="gchar*" />
+      <field name="Packing" cname="packing property names (on child widgets) used gchar* y_prop" type="//" />
+      <field name="To" cname="to obtain &amp; configure widget coordinatesgchar* width_prop" type="//" />
+      <field name="Property" cname="property names (on child widgets) used to obtaingchar* height_prop" type="//" />
+      <field name="Configure" cname="&amp; configure widget dimentions.gint              pointer_x_origin" type="//" />
+      <field name="PointerYOrigin" cname="pointer_y_origin" type="gint" />
+      <field name="PointerXChildOrigin" cname="pointer_x_child_origin" type="gint" />
+      <field name="PointerYChildOrigin" cname="pointer_y_child_origin" type="gint" />
+      <field name="ChildXOrigin" cname="child_x_origin" type="gint" />
+      <field name="ChildYOrigin" cname="child_y_origin" type="gint" />
+      <field name="ChildWidthOrigin" cname="child_width_origin" type="gint" />
+      <field name="ChildHeightOrigin" cname="child_height_origin" type="gint" />
+      <field name="Configuring" cname="configuring" type="GladeWidget*" />
+      <field name="Operation" cname="operation" type="GladeCursorType" />
+      <field name="Creating" cname="creating" type="gboolean" />
+      <field name="CreateX" cname="create_x" type="gint" />
+      <field name="CreateY" cname="create_y" type="gint" />
+      <field name="MouseX" cname="mouse_x" type="gint" />
+      <field name="MouseY" cname="mouse_y" type="gint" />
+      <property name="XProp" cname="x_prop" type="gchar*" readable="true" writeable="true" construct-only="true" />
+      <property name="YProp" cname="y_prop" type="gchar*" readable="true" writeable="true" construct-only="true" />
+      <property name="WidthProp" cname="width_prop" type="gchar*" readable="true" writeable="true" construct-only="true" />
+      <property name="HeightProp" cname="height_prop" type="gchar*" readable="true" writeable="true" construct-only="true" />
+      <signal name="CreateChild" cname="create-child" when="LAST">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidgetClass*" name="arg2" />
+        </parameters>
+      </signal>
+      <signal name="ChildCreated" cname="child-created" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidget*" name="arg2" />
+        </parameters>
+      </signal>
+      <signal name="AddChild" cname="add-child" when="LAST">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidget*" name="arg2" />
+        </parameters>
+      </signal>
+      <signal name="RemoveChild" cname="remove-child" when="LAST">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidget*" name="arg2" />
+        </parameters>
+      </signal>
+      <signal name="ConfigureChild" cname="configure-child" when="LAST">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidget*" name="arg2" />
+          <parameter type="GdkRectangle*" name="arg3" />
+        </parameters>
+      </signal>
+      <signal name="ConfigureBegin" cname="configure-begin" when="FIRST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidget*" name="arg2" />
+        </parameters>
+      </signal>
+      <signal name="ConfigureEnd" cname="configure-end" when="FIRST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeFixedManager*" name="arg1" />
+          <parameter type="GladeWidget*" name="arg2" />
+        </parameters>
+      </signal>
+      <virtual_method name="Event" cname="event">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GtkWidget*" name="arg1" />
+          <parameter type="GdkEvent*" name="arg2" />
+          <parameter type="GladeFixedManager*" name="arg3" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="ChildEvent" cname="child_event">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GtkWidget*" name="arg1" />
+          <parameter type="GdkEvent*" name="arg2" />
+          <parameter type="GladeFixedManager*" name="arg3" />
+        </parameters>
+      </virtual_method>
+      <method name="AddChild" cname="glade_fixed_manager_add_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="child" />
+          <parameter type="gboolean" name="at_mouse" />
+        </parameters>
+      </method>
+      <method name="CreateChild" cname="glade_fixed_manager_create_child">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="GladeWidgetClass*" name="wclass" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_fixed_manager_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_fixed_manager_new">
+        <parameters>
+          <parameter type="GladeWidget*" name="gtkcontainer" />
+          <parameter type="const-gchar*" name="x_prop" />
+          <parameter type="const-gchar*" name="y_prop" />
+          <parameter type="const-gchar*" name="width_prop" />
+          <parameter type="const-gchar*" name="height_prop" />
+        </parameters>
+      </constructor>
+      <method name="PostMouse" cname="glade_fixed_manager_post_mouse">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="x" />
+          <parameter type="gint" name="y" />
+        </parameters>
+      </method>
+      <method name="RemoveChild" cname="glade_fixed_manager_remove_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="child" />
+        </parameters>
+      </method>
+    </object>
+    <object name="KeysDialog" cname="GladeKeysDialog" parent="GtkDialog">
+      <field name="Store" cname="store" type="GtkListStore*" />
+      <field name="List" cname="list" type="GtkWidget*" />
+      <method name="GetSelectedKeySymbol" cname="glade_keys_dialog_get_selected_key_symbol">
+        <return-type type="gchar*" />
+      </method>
+      <method name="GetType" cname="glade_keys_dialog_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_keys_dialog_new" />
+    </object>
+    <object name="Palette" cname="GladePalette" parent="GtkVBox">
+      <field name="Current" cname="current" type="GladeWidgetClass*" />
+      <field name="Selector" cname="selector" type="GtkWidget*" />
+      <field name="Label" cname="label" type="GtkWidget*" />
+      <field name="Notebook" cname="notebook" type="GtkWidget*" />
+      <field name="NbSections" cname="nb_sections" type="gint" />
+      <field name="CatalogSelector" cname="catalog_selector" type="GtkWidget*" />
+      <field name="WidgetsButtonGroup" cname="widgets_button_group" type="GSList*" />
+      <signal name="Toggled" cname="toggled" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladePalette*" name="palette" />
+        </parameters>
+      </signal>
+      <signal name="CatalogChanged" cname="catalog-changed" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladePalette*" name="palette" />
+        </parameters>
+      </signal>
+      <method name="GetType" cname="glade_palette_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_palette_new">
+        <parameters>
+          <parameter type="GList*" name="catalogs" />
+        </parameters>
+      </constructor>
+      <method name="UnselectWidget" cname="glade_palette_unselect_widget">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="Placeholder" cname="GladePlaceholder" parent="GtkWidget">
+      <field name="PlaceholderPixmap" cname="placeholder_pixmap" type="GdkPixmap*" />
+      <method name="GetParent" cname="glade_placeholder_get_parent">
+        <return-type type="GladeWidget*" />
+      </method>
+      <method name="GetType" cname="glade_placeholder_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_placeholder_new" />
+    </object>
+    <object name="Project" cname="GladeProject" parent="GObject">
+      <field name="Name" cname="name" type="gchar*" />
+      <field name="Path" cname="path" type="gchar*" />
+      <field name="Action" cname="action" type="GtkToggleAction*" />
+      <field name="Changed" cname="changed" type="gboolean" />
+      <field name="Objects" cname="objects" type="GList*" />
+      <field name="Selection" cname="selection" type="GList*" />
+      <field name="UndoStack" cname="undo_stack" type="GList*" />
+      <field name="PrevRedoItem" cname="prev_redo_item" type="GList*" />
+      <field name="WidgetNamesAllocator" cname="widget_names_allocator" type="GHashTable*" />
+      <field name="WidgetOldNames" cname="widget_old_names" type="GHashTable*" />
+      <field name="Tooltips" cname="tooltips" type="GtkTooltips*" />
+      <signal name="AddWidget" cname="add_widget" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </signal>
+      <signal name="RemoveWidget" cname="remove_widget" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </signal>
+      <signal name="WidgetNameChanged" cname="widget_name_changed" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </signal>
+      <signal name="SelectionChanged" cname="selection_changed" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </signal>
+      <method name="AddObject" cname="glade_project_add_object">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="Changed" cname="glade_project_changed">
+        <return-type type="void" />
+      </method>
+      <method name="GetMenuitem" cname="glade_project_get_menuitem">
+        <return-type type="GtkWidget*" />
+      </method>
+      <method name="GetMenuitemMergeId" cname="glade_project_get_menuitem_merge_id">
+        <return-type type="guint" />
+      </method>
+      <method name="GetTooltips" cname="glade_project_get_tooltips">
+        <return-type type="GtkTooltips*" />
+      </method>
+      <method name="GetType" cname="glade_project_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetWidgetByName" cname="glade_project_get_widget_by_name">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+        </parameters>
+      </method>
+      <method name="HasObject" cname="glade_project_has_object">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="IsSelected" cname="glade_project_is_selected">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+        </parameters>
+      </method>
+      <constructor cname="glade_project_new">
+        <parameters>
+          <parameter type="gboolean" name="untitled" />
+        </parameters>
+      </constructor>
+      <constructor cname="glade_project_new_widget_name">
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="const-char*" name="base_name" />
+        </parameters>
+      </constructor>
+      <method name="Open" cname="glade_project_open" shared="true">
+        <return-type type="GladeProject*" />
+        <parameters>
+          <parameter type="const-gchar*" name="path" />
+        </parameters>
+      </method>
+      <method name="RemoveObject" cname="glade_project_remove_object">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="Save" cname="glade_project_save">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="path" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+      <method name="SelectionAdd" cname="glade_project_selection_add">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="SelectionChanged" cname="glade_project_selection_changed">
+        <return-type type="void" />
+      </method>
+      <method name="SelectionClear" cname="glade_project_selection_clear">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="SelectionGet" cname="glade_project_selection_get">
+        <return-type type="GList*" />
+      </method>
+      <method name="SelectionRemove" cname="glade_project_selection_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="SelectionSet" cname="glade_project_selection_set">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="SetAccelGroup" cname="glade_project_set_accel_group">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkAccelGroup*" name="accel_group" />
+        </parameters>
+      </method>
+      <method name="WidgetNameChanged" cname="glade_project_widget_name_changed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="const-char*" name="old_name" />
+        </parameters>
+      </method>
+    </object>
+    <object name="ProjectView" cname="GladeProjectView" parent="GtkScrolledWindow">
+      <field name="Model" cname="model" type="GtkTreeStore*" />
+      <field name="TreeView" cname="tree_view" type="GtkWidget*" />
+      <field name="IsList" cname="is_list" type="gboolean" />
+      <field name="Project" cname="project" type="GladeProject*" />
+      <field name="SelectedWidget" cname="selected_widget" type="GladeWidget*" />
+      <field name="AddWidgetSignalId" cname="add_widget_signal_id" type="gulong" />
+      <field name="RemoveWidgetSignalId" cname="remove_widget_signal_id" type="gulong" />
+      <field name="WidgetNameChangedSignalId" cname="widget_name_changed_signal_id" type="gulong" />
+      <field name="SelectionChangedSignalId" cname="selection_changed_signal_id" type="gulong" />
+      <field name="UpdatingSelection" cname="updating_selection" type="gboolean" />
+      <field name="UpdatingTreeview" cname="updating_treeview" type="gboolean" />
+      <virtual_method name="ItemSelected" cname="item_selected">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+          <parameter type="GladeWidget*" name="component" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="AddItem" cname="add_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="RemoveItem" cname="remove_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="WidgetNameChanged" cname="widget_name_changed">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SetProject" cname="set_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </virtual_method>
+      <virtual_method name="SelectionUpdate" cname="selection_update">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProjectView*" name="view" />
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </virtual_method>
+      <method name="GetProject" cname="glade_project_view_get_project">
+        <return-type type="GladeProject*" />
+      </method>
+      <method name="GetType" cname="glade_project_view_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_project_view_new">
+        <parameters>
+          <parameter type="GladeProjectViewType" name="type" />
+        </parameters>
+      </constructor>
+      <method name="SelectItem" cname="glade_project_view_select_item">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="item" />
+        </parameters>
+      </method>
+      <method name="SetProject" cname="glade_project_view_set_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+    </object>
+    <object name="ProjectWindow" cname="GladeProjectWindow" parent="GladeApp">
+      <field name="Priv" cname="priv" type="GladeProjectWindowPriv*" />
+      <method name="GetType" cname="glade_project_window_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_project_window_new" />
+      <constructor cname="glade_project_window_new_project">
+        <parameters>
+          <parameter type="GladeProjectWindow*" name="gpw" />
+        </parameters>
+      </constructor>
+      <method name="OpenProject" cname="glade_project_window_open_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="path" />
+        </parameters>
+      </method>
+      <method name="ShowAll" cname="glade_project_window_show_all">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="Property" cname="GladeProperty" parent="GObject">
+      <field name="Class" cname="class" type="GladePropertyClass*" />
+      <field name="Widget" cname="widget" type="GladeWidget*" />
+      <field name="Value" cname="value" type="GValue*" />
+      <field name="Sensitive" cname="sensitive" type="gboolean" />
+      <field name="InsensitiveTooltip" cname="insensitive_tooltip" type="gchar*" />
+      <field name="Enabled" cname="enabled" type="gboolean" />
+      <field name="I18nTranslatable" cname="i18n_translatable" type="gboolean" />
+      <field name="I18nHasContext" cname="i18n_has_context" type="gboolean" />
+      <field name="I18nComment" cname="i18n_comment" type="gchar*" />
+      <field name="Loading" cname="loading" type="gboolean" />
+      <method name="Default" cname="glade_property_default">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Dup" cname="glade_property_dup">
+        <return-type type="GladeProperty*" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="Get" cname="glade_property_get">
+        <return-type type="void" />
+        <parameters>
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="GetDefault" cname="glade_property_get_default">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="GetEnabled" cname="glade_property_get_enabled">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetSensitive" cname="glade_property_get_sensitive">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetType" cname="glade_property_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetVaList" cname="glade_property_get_va_list">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="va_list" name="vl" />
+        </parameters>
+      </method>
+      <method name="GetValue" cname="glade_property_get_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="I18nGetHasContext" cname="glade_property_i18n_get_has_context">
+        <return-type type="gboolean" />
+      </method>
+      <method name="I18nGetTranslatable" cname="glade_property_i18n_get_translatable">
+        <return-type type="gboolean" />
+      </method>
+      <method name="I18nSetComment" cname="glade_property_i18n_set_comment">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="str" />
+        </parameters>
+      </method>
+      <method name="I18nSetHasContext" cname="glade_property_i18n_set_has_context">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="has_context" />
+        </parameters>
+      </method>
+      <method name="I18nSetTranslatable" cname="glade_property_i18n_set_translatable">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="translatable" />
+        </parameters>
+      </method>
+      <constructor cname="glade_property_new">
+        <parameters>
+          <parameter type="GladePropertyClass*" name="class" />
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </constructor>
+      <method name="Reset" cname="glade_property_reset">
+        <return-type type="void" />
+      </method>
+      <method name="Set" cname="glade_property_set">
+        <return-type type="void" />
+        <parameters>
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="SetEnabled" cname="glade_property_set_enabled">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="enabled" />
+        </parameters>
+      </method>
+      <method name="SetSensitive" cname="glade_property_set_sensitive">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="sensitive" />
+          <parameter type="const-gchar*" name="reason" />
+        </parameters>
+      </method>
+      <method name="SetVaList" cname="glade_property_set_va_list">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="va_list" name="vl" />
+        </parameters>
+      </method>
+      <method name="SetValue" cname="glade_property_set_value">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="Sync" cname="glade_property_sync">
+        <return-type type="void" />
+      </method>
+      <method name="Write" cname="glade_property_write">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeInterface*" name="interface" />
+          <parameter type="GArray*" name="props" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Widget" cname="GladeWidget" parent="GObject">
+      <field name="WidgetClass" cname="widget_class" type="GladeWidgetClass*" />
+      <field name="Project" cname="project" type="GladeProject*" />
+      <field name="Parent" cname="parent" type="GladeWidget*" />
+      <field name="Name" cname="name" type="char*" />
+      <field name="Internal" cname="internal" type="char*" />
+      <field name="Object" cname="object" type="GObject*" />
+      <field name="Properties" cname="properties" type="GList*" />
+      <field name="PackingProperties" cname="packing_properties" type="GList*" />
+      <field name="QueryUser" cname="query_user" type="gboolean" />
+      <field name="Signals" cname="signals" type="GHashTable*" />
+      <field name="Manager" cname="manager" type="GladeFixedManager*" />
+      <field name="Visible" cname="visible" type="gboolean" />
+      <field name="SaveX" cname="save_x" type="gint" />
+      <field name="SaveY" cname="save_y" type="gint" />
+      <field name="PosSaved" cname="pos_saved" type="gboolean" />
+      <property name="Name" cname="name" type="gchar*" readable="true" writeable="true" construct="true" />
+      <property name="Internal" cname="internal" type="gchar*" readable="true" writeable="true" construct="true" />
+      <property name="Object" cname="object" type="GObject" readable="true" writeable="true" construct="true" />
+      <property name="Class" cname="class" type="gpointer" readable="true" writeable="true" construct-only="true" />
+      <property name="Project" cname="project" type="GladeProject" readable="true" writeable="true" construct="true" />
+      <property name="Properties" cname="properties" type="gpointer" readable="true" writeable="true" construct-only="true" />
+      <property name="Parent" cname="parent" type="GladeWidget" readable="true" writeable="true" />
+      <signal name="AddSignalHandler" cname="add_signal_handler" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="GladeSignal*" name="signal_handler" />
+        </parameters>
+      </signal>
+      <signal name="RemoveSignalHandler" cname="remove_signal_handler" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="GladeSignal*" name="signal_handler" />
+        </parameters>
+      </signal>
+      <signal name="ChangeSignalHandler" cname="change_signal_handler" when="LAST">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="GladeSignal*" name="old_signal_handler" />
+          <parameter type="GladeSignal*" name="new_signal_handler" />
+        </parameters>
+      </signal>
+      <method name="AddSignalHandler" cname="glade_widget_add_signal_handler">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeSignal*" name="signal_handler" />
+        </parameters>
+      </method>
+      <method name="ChangeSignalHandler" cname="glade_widget_change_signal_handler">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeSignal*" name="old_signal_handler" />
+          <parameter type="GladeSignal*" name="new_signal_handler" />
+        </parameters>
+      </method>
+      <method name="Dup" cname="glade_widget_dup">
+        <return-type type="GladeWidget*" />
+      </method>
+      <method name="GetClass" cname="glade_widget_get_class">
+        <return-type type="GladeWidgetClass*" />
+      </method>
+      <method name="GetObject" cname="glade_widget_get_object">
+        <return-type type="GObject*" />
+      </method>
+      <method name="GetPackProperty" cname="glade_widget_get_pack_property">
+        <return-type type="GladeProperty*" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+        </parameters>
+      </method>
+      <method name="GetParent" cname="glade_widget_get_parent">
+        <return-type type="GladeWidget*" />
+      </method>
+      <method name="GetProject" cname="glade_widget_get_project">
+        <return-type type="GladeProject*" />
+      </method>
+      <method name="GetProperty" cname="glade_widget_get_property">
+        <return-type type="GladeProperty*" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_widget_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Hide" cname="glade_widget_hide">
+        <return-type type="void" />
+      </method>
+      <method name="ListSignalHandlers" cname="glade_widget_list_signal_handlers">
+        <return-type type="GPtrArray*" />
+        <parameters>
+          <parameter type="const-gchar*" name="signal_name" />
+        </parameters>
+      </method>
+      <constructor cname="glade_widget_new">
+        <parameters>
+          <parameter type="GladeWidget*" name="parent" />
+          <parameter type="GladeWidgetClass*" name="klass" />
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </constructor>
+      <constructor cname="glade_widget_new_for_internal_child">
+        <parameters>
+          <parameter type="GladeWidget*" name="parent" />
+          <parameter type="GObject*" name="internal_object" />
+          <parameter type="const-gchar*" name="internal_name" />
+        </parameters>
+      </constructor>
+      <method name="PackPropertyDefault" cname="glade_widget_pack_property_default">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+        </parameters>
+      </method>
+      <method name="PackPropertyGet" cname="glade_widget_pack_property_get">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="PackPropertyReset" cname="glade_widget_pack_property_reset">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+        </parameters>
+      </method>
+      <method name="PackPropertySet" cname="glade_widget_pack_property_set">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="PackPropertySetEnabled" cname="glade_widget_pack_property_set_enabled">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter type="gboolean" name="enabled" />
+        </parameters>
+      </method>
+      <method name="PackPropertySetSensitive" cname="glade_widget_pack_property_set_sensitive">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter type="gboolean" name="sensitive" />
+          <parameter type="const-gchar*" name="reason" />
+        </parameters>
+      </method>
+      <method name="PropertyDefault" cname="glade_widget_property_default">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+        </parameters>
+      </method>
+      <method name="PropertyGet" cname="glade_widget_property_get">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="PropertyReset" cname="glade_widget_property_reset">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+        </parameters>
+      </method>
+      <method name="PropertySet" cname="glade_widget_property_set">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="PropertySetEnabled" cname="glade_widget_property_set_enabled">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter type="gboolean" name="enabled" />
+        </parameters>
+      </method>
+      <method name="PropertySetSensitive" cname="glade_widget_property_set_sensitive">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="id_property" />
+          <parameter type="gboolean" name="sensitive" />
+          <parameter type="const-gchar*" name="reason" />
+        </parameters>
+      </method>
+      <method name="Read" cname="glade_widget_read" shared="true">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="GladeWidgetInfo*" name="info" />
+        </parameters>
+      </method>
+      <method name="Rebuild" cname="glade_widget_rebuild">
+        <return-type type="void" />
+      </method>
+      <method name="RemoveSignalHandler" cname="glade_widget_remove_signal_handler">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeSignal*" name="signal_handler" />
+        </parameters>
+      </method>
+      <method name="Replace" cname="glade_widget_replace">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="old_object" />
+          <parameter type="GObject*" name="new_object" />
+        </parameters>
+      </method>
+      <method name="RetrieveFromPosition" cname="glade_widget_retrieve_from_position" shared="true">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="GtkWidget*" name="base" />
+          <parameter type="int" name="x" />
+          <parameter type="int" name="y" />
+        </parameters>
+      </method>
+      <method name="SetInternal" cname="glade_widget_set_internal">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="internal" />
+        </parameters>
+      </method>
+      <method name="SetName" cname="glade_widget_set_name">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="SetObject" cname="glade_widget_set_object">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="new_object" />
+        </parameters>
+      </method>
+      <method name="SetParent" cname="glade_widget_set_parent">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="parent" />
+        </parameters>
+      </method>
+      <method name="SetProject" cname="glade_widget_set_project">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+        </parameters>
+      </method>
+      <method name="Show" cname="glade_widget_show">
+        <return-type type="void" />
+      </method>
+      <method name="Write" cname="glade_widget_write">
+        <return-type type="GladeWidgetInfo*" />
+        <parameters>
+          <parameter type="GladeInterface*" name="interface" />
+        </parameters>
+      </method>
+    </object>
+    <struct name="GCSetPropData" cname="GCSetPropData">
+      <field name="Property" cname="property" type="GladeProperty*" />
+      <field name="NewValue" cname="new_value" type="GValue*" />
+      <field name="OldValue" cname="old_value" type="GValue*" />
+    </struct>
+    <struct name="AccelInfo" cname="GladeAccelInfo">
+      <field name="Key" cname="key" type="guint" />
+      <field name="Modifiers" cname="modifiers" type="GdkModifierType" />
+      <field name="Signal" cname="signal" type="gchar*" />
+    </struct>
+    <struct name="AppPriv" cname="GladeAppPriv" opaque="true" />
+    <struct name="AtkActionInfo" cname="GladeAtkActionInfo">
+      <field name="ActionName" cname="action_name" type="gchar*" />
+      <field name="Description" cname="description" type="gchar*" />
+    </struct>
+    <struct name="AtkRelationInfo" cname="GladeAtkRelationInfo">
+      <field name="Target" cname="target" type="gchar*" />
+      <field name="Type" cname="type" type="gchar*" />
+    </struct>
+    <struct name="Catalog" cname="GladeCatalog" opaque="true">
+      <method name="Free" cname="glade_catalog_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetName" cname="glade_catalog_get_name">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetWidgetClasses" cname="glade_catalog_get_widget_classes">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetWidgetGroups" cname="glade_catalog_get_widget_groups">
+        <return-type type="GList*" />
+      </method>
+      <method name="LoadAll" cname="glade_catalog_load_all" shared="true">
+        <return-type type="GList*" />
+      </method>
+    </struct>
+    <struct name="ChildInfo" cname="GladeChildInfo">
+      <field name="Properties" cname="properties" type="GladePropInfo*" />
+      <field name="NProperties" cname="n_properties" type="guint" />
+      <field name="Child" cname="child" type="GladeWidgetInfo*" />
+      <field name="InternalChild" cname="internal_child" type="gchar*" />
+    </struct>
+    <struct name="Cursor" cname="GladeCursor" opaque="true">
+      <method name="Init" cname="glade_cursor_init" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="Set" cname="glade_cursor_set" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GdkWindow*" name="window" />
+          <parameter type="GladeCursorType" name="type" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="EditorProperty" cname="GladeEditorProperty">
+      <field name="Class" cname="class" type="GladePropertyClass*" />
+      <field name="Property" cname="property" type="GladeProperty*" />
+      <field name="Input" cname="input" type="GtkWidget*" />
+      <field name="Children" cname="children" type="GList*" />
+      <field name="FromQueryDialog" cname="from_query_dialog" type="gboolean" />
+      <field name="TooltipId" cname="tooltip_id" type="gulong" />
+      <field name="TooltipProp" cname="tooltip_prop" type="GladeProperty*" />
+      <field name="SignalProp" cname="signal_prop" type="GladeProperty*" />
+      <field name="SensitiveId" cname="sensitive_id" type="gulong" />
+      <field name="ChangedId" cname="changed_id" type="gulong" />
+      <field name="EnabledId" cname="enabled_id" type="gulong" />
+      <field name="Eventbox" cname="eventbox" type="GtkWidget*" />
+      <field name="ItemLabel" cname="item_label" type="GtkWidget*" />
+      <field name="TextEntry" cname="text_entry" type="GtkWidget*" />
+    </struct>
+    <struct name="EditorTable" cname="GladeEditorTable">
+      <field name="Editor" cname="editor" type="GladeEditor*" />
+      <field name="GladeWidgetClass" cname="glade_widget_class" type="GladeWidgetClass*" />
+      <field name="TableWidget" cname="table_widget" type="GtkWidget*" />
+      <field name="NameEntry" cname="name_entry" type="GtkWidget*" />
+      <field name="Properties" cname="properties" type="GList*" />
+      <field name="Type" cname="type" type="GladeEditorTableType" />
+      <field name="Rows" cname="rows" type="gint" />
+    </struct>
+    <struct name="IDAllocator" cname="GladeIDAllocator" opaque="true">
+      <field name="NWords" cname="n_words" type="guint" access="public" writeable="true" />
+      <field name="Data" cname="data" type="guint32*" access="public" writeable="true" />
+      <method name="Alloc" cname="glade_id_allocator_alloc">
+        <return-type type="guint" />
+      </method>
+      <method name="Free" cname="glade_id_allocator_free">
+        <return-type type="void" />
+      </method>
+      <constructor cname="glade_id_allocator_new" />
+      <method name="Release" cname="glade_id_allocator_release">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="id" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Interface" cname="GladeInterface" opaque="true">
+      <field name="Requires" cname="requires" type="gchar**" access="public" writeable="true" />
+      <field name="NRequires" cname="n_requires" type="guint" access="public" writeable="true" />
+      <field name="Toplevels" cname="toplevels" type="GladeWidgetInfo**" access="public" writeable="true" />
+      <field name="NToplevels" cname="n_toplevels" type="guint" access="public" writeable="true" />
+      <field name="Names" cname="names" type="GHashTable*" access="public" writeable="true" />
+      <field name="Strings" cname="strings" type="GHashTable*" access="public" writeable="true" />
+      <method name="Destroy" cname="glade_interface_destroy">
+        <return-type type="void" />
+      </method>
+      <method name="Dump" cname="glade_interface_dump">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="filename" />
+        </parameters>
+      </method>
+      <method name="DumpFull" cname="glade_interface_dump_full">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="filename" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="MenuEditor" cname="GladeMenuEditor" opaque="true">
+      <field name="Window" cname="window" type="GtkWindow" access="public" writeable="true" />
+      <field name="Clist" cname="clist" type="GtkWidget*" access="public" writeable="true" />
+      <field name="StockLabel" cname="stock_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="StockCombo" cname="stock_combo" type="GtkWidget*" access="public" writeable="true" />
+      <field name="IconLabel" cname="icon_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="IconWidget" cname="icon_widget" type="GtkWidget*" access="public" writeable="true" />
+      <field name="IconButton" cname="icon_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="LabelLabel" cname="label_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="LabelEntry" cname="label_entry" type="GtkWidget*" access="public" writeable="true" />
+      <field name="NameLabel" cname="name_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="NameEntry" cname="name_entry" type="GtkWidget*" access="public" writeable="true" />
+      <field name="HandlerLabel" cname="handler_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="HandlerEntry" cname="handler_entry" type="GtkWidget*" access="public" writeable="true" />
+      <field name="TooltipLabel" cname="tooltip_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="TooltipEntry" cname="tooltip_entry" type="GtkWidget*" access="public" writeable="true" />
+      <field name="TypeFrame" cname="type_frame" type="GtkWidget*" access="public" writeable="true" />
+      <field name="NormalRadiobutton" cname="normal_radiobutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="CheckRadiobutton" cname="check_radiobutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="RadioRadiobutton" cname="radio_radiobutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="RightJustifyLabel" cname="right_justify_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="RightJustifyTogglebutton" cname="right_justify_togglebutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="StateLabel" cname="state_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="StateTogglebutton" cname="state_togglebutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="GroupLabel" cname="group_label" type="GtkWidget*" access="public" writeable="true" />
+      <field name="GroupCombo" cname="group_combo" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AccelFrame" cname="accel_frame" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AccelKeyEntry" cname="accel_key_entry" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AccelCtrlCheckbutton" cname="accel_ctrl_checkbutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AccelShiftCheckbutton" cname="accel_shift_checkbutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AccelAltCheckbutton" cname="accel_alt_checkbutton" type="GtkWidget*" access="public" writeable="true" />
+      <field name="UpButton" cname="up_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="DownButton" cname="down_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="LeftButton" cname="left_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="RightButton" cname="right_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AddButton" cname="add_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AddChildButton" cname="add_child_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="AddSeparatorButton" cname="add_separator_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="DeleteButton" cname="delete_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="OkButton" cname="ok_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="ApplyButton" cname="apply_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="CancelButton" cname="cancel_button" type="GtkWidget*" access="public" writeable="true" />
+      <field name="KeysDialog" cname="keys_dialog" type="GtkWidget*" access="public" writeable="true" />
+      <field name="Project" cname="project" type="GladeProject*" access="public" writeable="true" />
+      <field name="Menu" cname="menu" type="GtkMenuShell*" access="public" writeable="true" />
+      <field name="GnomeSupport" cname="gnome_support" type="gboolean" access="public" writeable="true" />
+      <field name="MenuDestroyHandlerId" cname="menu_destroy_handler_id" type="guint" access="public" writeable="true" />
+      <field name="UpdatingWidgets" cname="updating_widgets" type="gboolean" access="public" writeable="true" />
+      <field name="StockItems" cname="stock_items" type="GSList*" access="public" writeable="true" />
+      <method name="GetType" cname="glade_menu_editor_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_menu_editor_new">
+        <parameters>
+          <parameter type="GladeProject*" name="project" />
+          <parameter type="GtkMenuShell*" name="menu" />
+        </parameters>
+      </constructor>
+    </struct>
+    <struct name="MenuEditorClass" cname="GladeMenuEditorClass">
+      <field name="ParentClass" cname="parent_class" type="GtkWindowClass" />
+    </struct>
+    <struct name="PackingDefault" cname="GladePackingDefault">
+      <field name="Id" cname="id" type="gchar*" />
+      <field name="Value" cname="value" type="gchar*" />
+    </struct>
+    <struct name="Parameter" cname="GladeParameter" opaque="true">
+      <field name="Key" cname="key" type="gchar*" access="public" writeable="true" />
+      <field name="Value" cname="value" type="gchar*" access="public" writeable="true" />
+      <method name="Clone" cname="glade_parameter_clone">
+        <return-type type="GladeParameter*" />
+      </method>
+      <method name="Free" cname="glade_parameter_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetBoolean" cname="glade_parameter_get_boolean" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="parameters" />
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gboolean*" name="value" />
+        </parameters>
+      </method>
+      <method name="GetFloat" cname="glade_parameter_get_float" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="parameters" />
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gfloat*" name="value" />
+        </parameters>
+      </method>
+      <method name="GetInteger" cname="glade_parameter_get_integer" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="parameters" />
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gint*" name="value" />
+        </parameters>
+      </method>
+      <method name="GetString" cname="glade_parameter_get_string" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GList*" name="parameters" />
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="gchar**" name="value" />
+        </parameters>
+      </method>
+      <method name="ListNewFromNode" cname="glade_parameter_list_new_from_node" shared="true">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="GList*" name="list" />
+          <parameter type="GladeXmlNode*" name="node" />
+        </parameters>
+      </method>
+      <constructor cname="glade_parameter_new" />
+    </struct>
+    <struct name="ProjectWindowPriv" cname="GladeProjectWindowPriv" opaque="true" />
+    <struct name="PropInfo" cname="GladePropInfo">
+      <field name="Name" cname="name" type="gchar*" />
+      <field name="Value" cname="value" type="gchar*" />
+    </struct>
+    <struct name="PropertyClass" cname="GladePropertyClass" opaque="true">
+      <field name="Pspec" cname="pspec" type="GParamSpec*" access="public" writeable="true" />
+      <field name="Id" cname="id" type="gchar*" access="public" writeable="true" />
+      <field name="Name" cname="name" type="gchar*" access="public" writeable="true" />
+      <field name="Tooltip" cname="tooltip" type="gchar*" access="public" writeable="true" />
+      <field name="Def" cname="def" type="GValue*" access="public" writeable="true" />
+      <field name="OrigDef" cname="orig_def" type="GValue*" access="public" writeable="true" />
+      <field name="Parameters" cname="parameters" type="GList*" access="public" writeable="true" />
+      <field name="DisplayableValues" cname="displayable_values" type="GArray*" access="public" writeable="true" />
+      <field name="Query" cname="query" type="gboolean" access="public" writeable="true" />
+      <field name="Optional" cname="optional" type="gboolean" access="public" writeable="true" />
+      <field name="OptionalDefault" cname="optional_default" type="gboolean" access="public" writeable="true" />
+      <field name="ConstructOnly" cname="construct_only" type="gboolean" access="public" writeable="true" />
+      <field name="Common" cname="common" type="gboolean" access="public" writeable="true" />
+      <field name="Packing" cname="packing" type="gboolean" access="public" writeable="true" />
+      <field name="Translatable" cname="translatable" type="gboolean" access="public" writeable="true" />
+      <field name="VisibleLines" cname="visible_lines" type="gint" access="public" writeable="true" />
+      <field name="Save" cname="save" type="gboolean" access="public" writeable="true" />
+      <field name="Visible" cname="visible" type="gboolean" access="public" writeable="true" />
+      <field name="Ignore" cname="ignore" type="gboolean" access="public" writeable="true" />
+      <field name="IsModified" cname="is_modified" type="gboolean" access="public" writeable="true" />
+      <callback cname="verify_function">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="object,const-GValue*" />
+        </parameters>
+      </callback>
+      <callback cname="set_function">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object,const-GValue*" />
+        </parameters>
+      </callback>
+      <callback cname="get_function">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object,GValue*" />
+        </parameters>
+      </callback>
+      <method name="Clone" cname="glade_property_class_clone">
+        <return-type type="GladePropertyClass*" />
+      </method>
+      <method name="Free" cname="glade_property_class_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetDisplayableValue" cname="glade_property_class_get_displayable_value">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="gint" name="value" />
+        </parameters>
+      </method>
+      <method name="IsVisible" cname="glade_property_class_is_visible">
+        <return-type type="gboolean" />
+      </method>
+      <method name="MakeAdjustment" cname="glade_property_class_make_adjustment">
+        <return-type type="GtkAdjustment*" />
+      </method>
+      <method name="MakeGvalueFromString" cname="glade_property_class_make_gvalue_from_string">
+        <return-type type="GValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="string" />
+        </parameters>
+      </method>
+      <method name="MakeStringFromFlags" cname="glade_property_class_make_string_from_flags">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="guint" name="fvals" />
+          <parameter type="gboolean" name="displayables" />
+        </parameters>
+      </method>
+      <method name="MakeStringFromGvalue" cname="glade_property_class_make_string_from_gvalue">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <constructor cname="glade_property_class_new" />
+      <constructor cname="glade_property_class_new_from_spec">
+        <parameters>
+          <parameter type="GParamSpec*" name="spec" />
+        </parameters>
+      </constructor>
+      <method name="UpdateFromNode" cname="glade_property_class_update_from_node" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="GModule*" name="module" />
+          <parameter type="GType" name="widget_type" />
+          <parameter type="GladePropertyClass**" name="property_class" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Signal" cname="GladeSignal" opaque="true">
+      <field name="Name" cname="name" type="gchar*" access="public" writeable="true" />
+      <field name="Handler" cname="handler" type="gchar*" access="public" writeable="true" />
+      <field name="Userdata" cname="userdata" type="gchar*" access="public" writeable="true" />
+      <field name="Lookup" cname="lookup" type="gboolean" access="public" writeable="true" />
+      <field name="After" cname="after" type="gboolean" access="public" writeable="true" />
+      <method name="Clone" cname="glade_signal_clone">
+        <return-type type="GladeSignal*" />
+      </method>
+      <method name="Equal" cname="glade_signal_equal">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeSignal*" name="sig2" />
+        </parameters>
+      </method>
+      <method name="Free" cname="glade_signal_free">
+        <return-type type="void" />
+      </method>
+      <constructor cname="glade_signal_new">
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="handler" />
+          <parameter type="const-gchar*" name="userdata" />
+          <parameter type="gboolean" name="lookup" />
+          <parameter type="gboolean" name="after" />
+        </parameters>
+      </constructor>
+      <constructor cname="glade_signal_new_from_signal_info">
+        <parameters>
+          <parameter type="GladeSignalInfo*" name="info" />
+        </parameters>
+      </constructor>
+      <method name="Write" cname="glade_signal_write" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeSignalInfo*" name="info" />
+          <parameter type="GladeSignal*" name="signal" />
+          <parameter type="GladeInterface*" name="interface" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="SignalEditor" cname="GladeSignalEditor" opaque="true">
+      <field name="MainWindow" cname="main_window" type="GtkWidget*" access="public" writeable="true" />
+      <field name="Widget" cname="widget" type="GladeWidget*" access="public" writeable="true" />
+      <field name="Class" cname="class" type="GladeWidgetClass*" access="public" writeable="true" />
+      <field name="Editor" cname="editor" type="gpointer*" access="public" writeable="true" />
+      <field name="SignalsList" cname="signals_list" type="GtkWidget*" access="public" writeable="true" />
+      <field name="Model" cname="model" type="GtkTreeStore*" access="public" writeable="true" />
+      <field name="TreeView" cname="tree_view" type="GtkTreeView*" access="public" writeable="true" />
+      <method name="GetWidget" cname="glade_signal_editor_get_widget">
+        <return-type type="GtkWidget*" />
+      </method>
+      <method name="LoadWidget" cname="glade_signal_editor_load_widget">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <constructor cname="glade_signal_editor_new">
+        <parameters>
+          <parameter type="gpointer*" name="editor" />
+        </parameters>
+      </constructor>
+    </struct>
+    <struct name="SignalInfo" cname="GladeSignalInfo">
+      <field name="Name" cname="name" type="gchar*" />
+      <field name="Handler" cname="handler" type="gchar*" />
+      <field name="Object" cname="object" type="gchar*" />
+      <field name="After" cname="after" bits="1" type="guint" />
+      <field name="Lookup" cname="lookup" bits="1" type="guint" />
+    </struct>
+    <struct name="SupportedChild" cname="GladeSupportedChild">
+      <field name="Type" cname="type" type="GType" />
+      <field name="Properties" cname="properties" type="GList*" />
+      <field name="Add" cname="add" type="GladeAddChildFunc" />
+      <field name="Remove" cname="remove" type="GladeRemoveChildFunc" />
+      <field name="GetChildren" cname="get_children" type="GladeGetChildrenFunc" />
+      <field name="GetAllChildren" cname="get_all_children" type="GladeGetChildrenFunc" />
+      <field name="SetProperty" cname="set_property" type="GladeChildSetPropertyFunc" />
+      <field name="GetProperty" cname="get_property" type="GladeChildGetPropertyFunc" />
+      <callback cname="replace_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="container," />
+        </parameters>
+      </callback>
+      <field name="SpecialChildType" cname="special_child_type" type="gchar*" />
+    </struct>
+    <struct name="WidgetClass" cname="GladeWidgetClass" opaque="true">
+      <field name="Type" cname="type" type="GType" access="public" writeable="true" />
+      <field name="Name" cname="name" type="gchar*" access="public" writeable="true" />
+      <field name="Icon" cname="icon" type="GdkPixbuf*" access="public" writeable="true" />
+      <field name="GenericName" cname="generic_name" type="gchar*" access="public" writeable="true" />
+      <field name="PaletteName" cname="palette_name" type="gchar*" access="public" writeable="true" />
+      <field name="Properties" cname="properties" type="GList*" access="public" writeable="true" />
+      <field name="Signals" cname="signals" type="GList*" access="public" writeable="true" />
+      <field name="Children" cname="children" type="GList*" access="public" writeable="true" />
+      <field name="ChildPackings" cname="child_packings" type="GList*" access="public" writeable="true" />
+      <field name="Module" cname="module" type="GModule*" access="public" writeable="true" />
+      <field name="InPalette" cname="in_palette" type="gboolean" access="public" writeable="true" />
+      <field name="PostCreateFunction" cname="post_create_function" type="GladePostCreateFunc" access="public" writeable="true" />
+      <field name="GetInternalChild" cname="get_internal_child" type="GladeGetInternalFunc" access="public" writeable="true" />
+      <callback cname="child_property_applies">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GtkWidget*" name="ancestor,GtkWidget*" />
+        </parameters>
+      </callback>
+      <method name="ContainerAdd" cname="glade_widget_class_container_add">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+          <parameter type="GObject*" name="child" />
+        </parameters>
+      </method>
+      <method name="ContainerGetAllChildren" cname="glade_widget_class_container_get_all_children">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+        </parameters>
+      </method>
+      <method name="ContainerGetChildren" cname="glade_widget_class_container_get_children">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+        </parameters>
+      </method>
+      <method name="ContainerGetProperty" cname="glade_widget_class_container_get_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+          <parameter type="GObject*" name="child" />
+          <parameter type="const-gchar*" name="property_name" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="ContainerHasChild" cname="glade_widget_class_container_has_child">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+          <parameter type="GObject*" name="child" />
+        </parameters>
+      </method>
+      <method name="ContainerRemove" cname="glade_widget_class_container_remove">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+          <parameter type="GObject*" name="child" />
+        </parameters>
+      </method>
+      <method name="ContainerReplaceChild" cname="glade_widget_class_container_replace_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+          <parameter type="GObject*" name="old" />
+          <parameter type="GObject*" name="new" />
+        </parameters>
+      </method>
+      <method name="ContainerSetProperty" cname="glade_widget_class_container_set_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="container" />
+          <parameter type="GObject*" name="child" />
+          <parameter type="const-gchar*" name="property_name" />
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="ContainsNonWidgets" cname="glade_widget_class_contains_non_widgets">
+        <return-type type="gboolean" />
+      </method>
+      <method name="DumpParamSpecs" cname="glade_widget_class_dump_param_specs">
+        <return-type type="void" />
+      </method>
+      <method name="Free" cname="glade_widget_class_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetByName" cname="glade_widget_class_get_by_name" shared="true">
+        <return-type type="GladeWidgetClass*" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+        </parameters>
+      </method>
+      <method name="GetByType" cname="glade_widget_class_get_by_type" shared="true">
+        <return-type type="GladeWidgetClass*" />
+        <parameters>
+          <parameter type="GType" name="type" />
+        </parameters>
+      </method>
+      <method name="GetChildSupport" cname="glade_widget_class_get_child_support">
+        <return-type type="GladeSupportedChild*" />
+        <parameters>
+          <parameter type="GType" name="child_type" />
+        </parameters>
+      </method>
+      <method name="GetDerivedTypes" cname="glade_widget_class_get_derived_types" shared="true">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="GType" name="type" />
+        </parameters>
+      </method>
+      <method name="GetPackingDefault" cname="glade_widget_class_get_packing_default">
+        <return-type type="GladePackingDefault*" />
+        <parameters>
+          <parameter type="GladeWidgetClass*" name="container_class" />
+          <parameter type="const-gchar*" name="propert_id" />
+        </parameters>
+      </method>
+      <method name="GetPropertyClass" cname="glade_widget_class_get_property_class">
+        <return-type type="GladePropertyClass*" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="glade_widget_class_get_type">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="glade_widget_class_new">
+        <parameters>
+          <parameter type="GladeXmlNode*" name="class_node" />
+          <parameter type="const-gchar*" name="library" />
+        </parameters>
+      </constructor>
+    </struct>
+    <struct name="WidgetClassSignal" cname="GladeWidgetClassSignal">
+      <field name="Name" cname="name" type="gchar*" />
+      <field name="Type" cname="type" type="gchar*" />
+    </struct>
+    <struct name="WidgetGroup" cname="GladeWidgetGroup" opaque="true">
+      <method name="Free" cname="glade_widget_group_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetName" cname="glade_widget_group_get_name">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetTitle" cname="glade_widget_group_get_title">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetWidgetClasses" cname="glade_widget_group_get_widget_classes">
+        <return-type type="GList*" />
+      </method>
+    </struct>
+    <struct name="WidgetInfo" cname="GladeWidgetInfo">
+      <field name="Parent" cname="parent" type="GladeWidgetInfo*" />
+      <field name="Classname" cname="classname" type="gchar*" />
+      <field name="Name" cname="name" type="gchar*" />
+      <field name="Properties" cname="properties" type="GladePropInfo*" />
+      <field name="NProperties" cname="n_properties" type="guint" />
+      <field name="AtkProps" cname="atk_props" type="GladePropInfo*" />
+      <field name="NAtkProps" cname="n_atk_props" type="guint" />
+      <field name="Signals" cname="signals" type="GladeSignalInfo*" />
+      <field name="NSignals" cname="n_signals" type="guint" />
+      <field name="AtkActions" cname="atk_actions" type="GladeAtkActionInfo*" />
+      <field name="NAtkActions" cname="n_atk_actions" type="guint" />
+      <field name="Relations" cname="relations" type="GladeAtkRelationInfo*" />
+      <field name="NRelations" cname="n_relations" type="guint" />
+      <field name="Accels" cname="accels" type="GladeAccelInfo*" />
+      <field name="NAccels" cname="n_accels" type="guint" />
+      <field name="Children" cname="children" type="GladeChildInfo*" />
+      <field name="NChildren" cname="n_children" type="guint" />
+    </struct>
+    <struct name="XmlContext" cname="GladeXmlContext" opaque="true">
+      <method name="Destroy" cname="glade_xml_context_destroy">
+        <return-type type="void" />
+      </method>
+      <method name="Free" cname="glade_xml_context_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetDoc" cname="glade_xml_context_get_doc">
+        <return-type type="GladeXmlDoc*" />
+      </method>
+      <constructor cname="glade_xml_context_new">
+        <parameters>
+          <parameter type="GladeXmlDoc*" name="doc" />
+          <parameter type="const-gchar*" name="name_space" />
+        </parameters>
+      </constructor>
+      <constructor cname="glade_xml_context_new_from_path">
+        <parameters>
+          <parameter type="const-gchar*" name="full_path" />
+          <parameter type="const-gchar*" name="nspace" />
+          <parameter type="const-gchar*" name="root_name" />
+        </parameters>
+      </constructor>
+    </struct>
+    <struct name="XmlDoc" cname="GladeXmlDoc" opaque="true">
+      <method name="Free" cname="glade_xml_doc_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetRoot" cname="glade_xml_doc_get_root">
+        <return-type type="GladeXmlNode*" />
+      </method>
+      <constructor cname="glade_xml_doc_new" />
+      <method name="Save" cname="glade_xml_doc_save">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="const-gchar*" name="full_path" />
+        </parameters>
+      </method>
+      <method name="SetRoot" cname="glade_xml_doc_set_root">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="XmlNode" cname="GladeXmlNode" opaque="true">
+      <method name="AppendChild" cname="glade_xml_node_append_child">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="child" />
+        </parameters>
+      </method>
+      <method name="Delete" cname="glade_xml_node_delete">
+        <return-type type="void" />
+      </method>
+      <method name="GetChildren" cname="glade_xml_node_get_children">
+        <return-type type="GladeXmlNode*" />
+      </method>
+      <method name="GetName" cname="glade_xml_node_get_name">
+        <return-type type="const-gchar*" />
+      </method>
+      <constructor cname="glade_xml_node_new">
+        <parameters>
+          <parameter type="GladeXmlContext*" name="context" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </constructor>
+      <method name="Next" cname="glade_xml_node_next">
+        <return-type type="GladeXmlNode*" />
+      </method>
+      <method name="SetPropertyBoolean" cname="glade_xml_node_set_property_boolean">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="gboolean" name="value" />
+        </parameters>
+      </method>
+      <method name="SetPropertyString" cname="glade_xml_node_set_property_string">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="string" />
+        </parameters>
+      </method>
+      <method name="Verify" cname="glade_xml_node_verify">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="VerifySilent" cname="glade_xml_node_verify_silent">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+    </struct>
+    <class name="Global" cname="GladeGlobal">
+      <method name="BooleanHandledAccumulator" cname="glade_boolean_handled_accumulator" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GSignalInvocationHint*" name="ihint" />
+          <parameter type="GValue*" name="return_accu" />
+          <parameter type="const-GValue*" name="handler_return" />
+          <parameter type="gpointer" name="dummy" />
+        </parameters>
+      </method>
+      <method name="SetupLogHandlers" cname="glade_setup_log_handlers" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="SingleObjectAccumulator" cname="glade_single_object_accumulator" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GSignalInvocationHint*" name="ihint" />
+          <parameter type="GValue*" name="return_accu" />
+          <parameter type="const-GValue*" name="handler_return" />
+          <parameter type="gpointer" name="dummy" />
+        </parameters>
+      </method>
+      <method name="UtilsGetPspecFromFuncname" cname="glade_utils_get_pspec_from_funcname" shared="true">
+        <return-type type="GParamSpec*" />
+        <parameters>
+          <parameter type="const-gchar*" name="funcname" />
+        </parameters>
+      </method>
+    </class>
+    <class name="Default" cname="GladeDefault_">
+      <method name="AppGetActiveProject" cname="glade_default_app_get_active_project" shared="true">
+        <return-type type="GladeProject*" />
+      </method>
+      <method name="AppGetAddClass" cname="glade_default_app_get_add_class" shared="true">
+        <return-type type="GladeWidgetClass*" />
+      </method>
+      <method name="AppGetAltClass" cname="glade_default_app_get_alt_class" shared="true">
+        <return-type type="GladeWidgetClass*" />
+      </method>
+      <method name="AppGetClipboard" cname="glade_default_app_get_clipboard" shared="true">
+        <return-type type="GladeClipboard*" />
+      </method>
+      <method name="AppGetEditor" cname="glade_default_app_get_editor" shared="true">
+        <return-type type="GladeEditor*" />
+      </method>
+      <method name="AppGetPalette" cname="glade_default_app_get_palette" shared="true">
+        <return-type type="GladePalette*" />
+      </method>
+      <method name="AppGetProjects" cname="glade_default_app_get_projects" shared="true">
+        <return-type type="GList*" />
+      </method>
+      <method name="AppGetSelection" cname="glade_default_app_get_selection" shared="true">
+        <return-type type="GList*" />
+      </method>
+      <method name="AppGetTransientParent" cname="glade_default_app_get_transient_parent" shared="true">
+        <return-type type="GtkWindow*" />
+      </method>
+      <method name="AppGetWindow" cname="glade_default_app_get_window" shared="true">
+        <return-type type="GtkWidget*" />
+      </method>
+      <method name="AppHideProperties" cname="glade_default_app_hide_properties" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="AppIsSelected" cname="glade_default_app_is_selected" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="AppSelectionAdd" cname="glade_default_app_selection_add" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="AppSelectionChanged" cname="glade_default_app_selection_changed" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="AppSelectionClear" cname="glade_default_app_selection_clear" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="AppSelectionRemove" cname="glade_default_app_selection_remove" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="AppSelectionSet" cname="glade_default_app_selection_set" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+          <parameter type="gboolean" name="emit_signal" />
+        </parameters>
+      </method>
+      <method name="AppSet" cname="glade_default_app_set" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeApp*" name="app" />
+        </parameters>
+      </method>
+      <method name="AppSetTransientParent" cname="glade_default_app_set_transient_parent" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWindow*" name="parent" />
+        </parameters>
+      </method>
+      <method name="AppShowProperties" cname="glade_default_app_show_properties" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="raise" />
+        </parameters>
+      </method>
+      <method name="AppUpdateUi" cname="glade_default_app_update_ui" shared="true">
+        <return-type type="void" />
+      </method>
+    </class>
+    <class name="Parser" cname="GladeParser_">
+      <method name="ParseBuffer" cname="glade_parser_parse_buffer" shared="true">
+        <return-type type="GladeInterface*" />
+        <parameters>
+          <parameter type="const-gchar*" name="buffer" />
+          <parameter type="gint" name="len" />
+          <parameter type="const-gchar*" name="domain" />
+        </parameters>
+      </method>
+      <method name="ParseFile" cname="glade_parser_parse_file" shared="true">
+        <return-type type="GladeInterface*" />
+        <parameters>
+          <parameter type="const-gchar*" name="file" />
+          <parameter type="const-gchar*" name="domain" />
+        </parameters>
+      </method>
+    </class>
+    <class name="Popup" cname="GladePopup_">
+      <method name="ClipboardPop" cname="glade_popup_clipboard_pop" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="GdkEventButton*" name="event" />
+        </parameters>
+      </method>
+      <method name="PlaceholderPop" cname="glade_popup_placeholder_pop" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladePlaceholder*" name="placeholder" />
+          <parameter type="GdkEventButton*" name="event" />
+        </parameters>
+      </method>
+      <method name="WidgetPop" cname="glade_popup_widget_pop" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeWidget*" name="widget" />
+          <parameter type="GdkEventButton*" name="event" />
+          <parameter type="gboolean" name="add_children" />
+        </parameters>
+      </method>
+    </class>
+    <class name="Standard" cname="GladeStandard_">
+      <method name="FloatSpec" cname="glade_standard_float_spec" shared="true">
+        <return-type type="GParamSpec*" />
+      </method>
+      <method name="IntSpec" cname="glade_standard_int_spec" shared="true">
+        <return-type type="GParamSpec*" />
+      </method>
+      <method name="StockGetType" cname="glade_standard_stock_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="StockSpec" cname="glade_standard_stock_spec" shared="true">
+        <return-type type="GParamSpec*" />
+      </method>
+      <method name="StringSpec" cname="glade_standard_string_spec" shared="true">
+        <return-type type="GParamSpec*" />
+      </method>
+    </class>
+    <class name="Util" cname="GladeUtil_">
+      <method name="AddSelection" cname="glade_util_add_selection" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="AnyGtkcontainerRelation" cname="glade_util_any_gtkcontainer_relation" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeWidget*" name="parent" />
+          <parameter type="GList*" name="widgets" />
+        </parameters>
+      </method>
+      <method name="BasenamesMatch" cname="glade_util_basenames_match" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="path1" />
+          <parameter type="const-gchar*" name="path2" />
+        </parameters>
+      </method>
+      <method name="ClearSelection" cname="glade_util_clear_selection" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="CompareStockLabels" cname="glade_util_compare_stock_labels" shared="true">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="gconstpointer" name="a" />
+          <parameter type="gconstpointer" name="b" />
+        </parameters>
+      </method>
+      <method name="ContainerGetAllChildren" cname="glade_util_container_get_all_children" shared="true">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="GtkContainer*" name="container" />
+        </parameters>
+      </method>
+      <method name="CopySelection" cname="glade_util_copy_selection" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="CountPlaceholders" cname="glade_util_count_placeholders" shared="true">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="GladeWidget*" name="parent" />
+        </parameters>
+      </method>
+      <method name="CutSelection" cname="glade_util_cut_selection" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="DeleteClipboard" cname="glade_util_delete_clipboard" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="DeleteSelection" cname="glade_util_delete_selection" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="DuplicateUnderscores" cname="glade_util_duplicate_underscores" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+        </parameters>
+      </method>
+      <method name="FileDialogNew" cname="glade_util_file_dialog_new" shared="true">
+        <return-type type="GtkWidget*" />
+        <parameters>
+          <parameter type="const-gchar*" name="title" />
+          <parameter type="GtkWindow*" name="parent" />
+          <parameter type="GladeUtilFileDialogType" name="action" />
+        </parameters>
+      </method>
+      <method name="FindIterByWidget" cname="glade_util_find_iter_by_widget" shared="true">
+        <return-type type="GtkTreeIter*" />
+        <parameters>
+          <parameter type="GtkTreeModel*" name="model" />
+          <parameter type="GladeWidget*" name="findme" />
+          <parameter type="gint" name="column" />
+        </parameters>
+      </method>
+      <method name="FlashMessage" cname="glade_util_flash_message" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="statusbar" />
+          <parameter type="guint" name="context_id" />
+          <parameter type="gchar*" name="format" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="GetParent" cname="glade_util_get_parent" shared="true">
+        <return-type type="GladeWidget*" />
+        <parameters>
+          <parameter type="GtkWidget*" name="w" />
+        </parameters>
+      </method>
+      <method name="GetSelection" cname="glade_util_get_selection" shared="true">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetTypeFromName" cname="glade_util_get_type_from_name" shared="true">
+        <return-type type="GType" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="GtkComboFind" cname="glade_util_gtk_combo_find" shared="true">
+        <return-type type="gpointer" />
+        <parameters>
+          <parameter type="GtkCombo*" name="combo" />
+        </parameters>
+      </method>
+      <method name="GtkComboFunc" cname="glade_util_gtk_combo_func" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="gpointer" name="data" />
+        </parameters>
+      </method>
+      <method name="GtkcontainerRelation" cname="glade_util_gtkcontainer_relation" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeWidget*" name="parent" />
+          <parameter type="GladeWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="HasSelection" cname="glade_util_has_selection" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GtkWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="HideWindow" cname="glade_util_hide_window" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWindow*" name="window" />
+        </parameters>
+      </method>
+      <method name="PasteClipboard" cname="glade_util_paste_clipboard" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladePlaceholder*" name="placeholder" />
+          <parameter type="GladeWidget*" name="parent" />
+        </parameters>
+      </method>
+      <method name="QueueDrawNodes" cname="glade_util_queue_draw_nodes" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GdkWindow*" name="window" />
+        </parameters>
+      </method>
+      <method name="RemoveSelection" cname="glade_util_remove_selection" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="widget" />
+        </parameters>
+      </method>
+      <method name="Replace" cname="glade_util_replace" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="char*" name="str" />
+          <parameter type="char" name="a" />
+          <parameter type="char" name="b" />
+        </parameters>
+      </method>
+      <method name="UiWarn" cname="glade_util_ui_warn" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="parent" />
+          <parameter type="const-gchar*" name="warning" />
+        </parameters>
+      </method>
+      <method name="UriListParse" cname="glade_util_uri_list_parse" shared="true">
+        <return-type type="GList*" />
+        <parameters>
+          <parameter type="const-gchar*" name="uri_list" />
+        </parameters>
+      </method>
+      <method name="WidgetPastable" cname="glade_util_widget_pastable" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeWidget*" name="child" />
+          <parameter type="GladeWidget*" name="parent" />
+        </parameters>
+      </method>
+      <method name="WidgetSetTooltip" cname="glade_util_widget_set_tooltip" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GtkWidget*" name="widget" />
+          <parameter type="const-gchar*" name="str" />
+        </parameters>
+      </method>
+    </class>
+    <class name="Xml" cname="GladeXml_">
+      <method name="GetBoolean" cname="glade_xml_get_boolean" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="gboolean" name="_default" />
+        </parameters>
+      </method>
+      <method name="GetContent" cname="glade_xml_get_content" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+        </parameters>
+      </method>
+      <method name="GetPropertyBoolean" cname="glade_xml_get_property_boolean" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node_in" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="gboolean" name="_default" />
+        </parameters>
+      </method>
+      <method name="GetPropertyString" cname="glade_xml_get_property_string" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node_in" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="GetPropertyStringRequired" cname="glade_xml_get_property_string_required" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node_in" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="xtra" />
+        </parameters>
+      </method>
+      <method name="GetValueInt" cname="glade_xml_get_value_int" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="int*" name="val" />
+        </parameters>
+      </method>
+      <method name="GetValueIntRequired" cname="glade_xml_get_value_int_required" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="int*" name="val" />
+        </parameters>
+      </method>
+      <method name="GetValueString" cname="glade_xml_get_value_string" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="GetValueStringRequired" cname="glade_xml_get_value_string_required" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="xtra_info" />
+        </parameters>
+      </method>
+      <method name="SearchChild" cname="glade_xml_search_child" shared="true">
+        <return-type type="GladeXmlNode*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="SearchChildRequired" cname="glade_xml_search_child_required" shared="true">
+        <return-type type="GladeXmlNode*" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="tree" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="SetContent" cname="glade_xml_set_content" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node_in" />
+          <parameter type="const-gchar*" name="content" />
+        </parameters>
+      </method>
+      <method name="SetValue" cname="glade_xml_set_value" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="GladeXmlNode*" name="node" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="val" />
+        </parameters>
+      </method>
+    </class>
+    <object name="Stock" cname="GladeStock">
+      <static-string cname="GLADE_MENU_ITEM_STOCK_ID_KEY" name="IdKey" value="GladeMenuItemStockIDKey" />
+    </object>
+  </namespace>
+</api>

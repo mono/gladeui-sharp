@@ -1,0 +1,8 @@
+	[DllImport("gladeui-sharp.dll")]
+	static extern void glade_default_app_set (IntPtr app);
+
+	public static void SetDefaultApp (App app)
+	{
+		glade_default_app_set (app.Handle);
+	}
+	

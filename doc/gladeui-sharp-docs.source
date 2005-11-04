@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<monodoc>
+  <source provider="ecma" basefile="gladeui-sharp-docs" path="classlib-gecko"/>
+</monodoc>

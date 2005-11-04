@@ -1,0 +1,176 @@
+<Type Name="Project" FullName="Gladeui.Project">
+  <TypeSignature Language="C#" Value="public class Project : GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Project (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete(Message=null, IsError=False)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="gtype" Type="GLib.GType" />
+      </Parameters>
+      <Docs>
+        <param name="gtype">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Project ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionChanged;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="selection_changed")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveWidget">
+      <MemberSignature Language="C#" Value="public event Gladeui.RemoveWidgetHandler RemoveWidget;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="remove_widget")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.RemoveWidgetHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWidget">
+      <MemberSignature Language="C#" Value="public event Gladeui.AddWidgetHandler AddWidget;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="add_widget")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.AddWidgetHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidgetNameChanged">
+      <MemberSignature Language="C#" Value="public event Gladeui.WidgetNameChangedHandler WidgetNameChanged;" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal(CName="widget_name_changed")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gladeui.WidgetNameChangedHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanged ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveWidget">
+      <MemberSignature Language="C#" Value="protected virtual void OnRemoveWidget (Gladeui.Widget widget);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="widget" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="widget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAddWidget">
+      <MemberSignature Language="C#" Value="protected virtual void OnAddWidget (Gladeui.Widget widget);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="widget" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="widget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWidgetNameChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnWidgetNameChanged (Gladeui.Widget widget);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="widget" Type="Gladeui.Widget" />
+      </Parameters>
+      <Docs>
+        <param name="widget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

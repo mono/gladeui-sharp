@@ -1,0 +1,27 @@
+<Type Name="ChildGetPropertyFunc" FullName="Gladeui.ChildGetPropertyFunc">
+  <TypeSignature Language="C#" Value="public delegate void ChildGetPropertyFunc(GLib.Object container, GLib.Object child, string property_name, GLib.Value value);" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="container" Type="GLib.Object" />
+    <Parameter Name="child" Type="GLib.Object" />
+    <Parameter Name="property_name" Type="System.String" />
+    <Parameter Name="value" Type="GLib.Value" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="container">To be added.</param>
+    <param name="child">To be added.</param>
+    <param name="property_name">To be added.</param>
+    <param name="value">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

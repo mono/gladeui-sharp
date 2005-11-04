@@ -1,0 +1,44 @@
+2005-05-12  Ben Maurer  <bmaurer@ximian.com>
+
+	* Makefile.am: Handle destdir correctly.
+
+2005-05-01  Mark Crichton  <crichton@gimp.org>
+
+	* en/GtkSharp.GeckoSharp: Removed, for it is worthless.
+	* Makefile.am: Cleaned up
+
+2004-06-28  John Luke  <jluke@cfl.rr.com>
+
+	* en/Gecko/WebControl.xml: fix the example
+
+2004-06-25  Mike Kestner  <mkestner@ximian.com>
+	
+	* en/Gecko/*.xml : auto vm, handler, and args docage.
+
+2004-06-25  Mike Kestner  <mkestner@ximian.com>
+	
+	* *.* : s/GtkMozEmbed/Gecko, big time.
+
+2003-12-03  John Luke  <jluke@cfl.rr.com>
+	
+	* en/GtkMozEmbed/EmbedWidget: minor updates
+
+2003-07-30  John Luke  <jluke@cfl.rr.com>
+
+	* all: ran doc updater so it would compile with the assembler
+
+2003-07-24  John Luke  <jluke@cfl.rr.com>
+
+	* en/GtkMozEmbed.xml: add summary
+
+2003-07-16  John Luke  <jluke@cfl.rr.com>
+
+	* en/GtkMozEmbed/EmbedWidget.xml: add example
+
+2003-07-02  John Luke  <jluke@cfl.rr.com>
+
+	* en/GtkMozEmbed/EmbedWidget.xml: add info (from http://www.mozilla.org/unix/gtk-embedding.html)
+
+2003-07-01  John Luke  <jluke@cfl.rr.com>
+
+	* Makefile: update to match gtk-sharp one

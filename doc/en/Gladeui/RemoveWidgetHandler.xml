@@ -1,0 +1,23 @@
+<Type Name="RemoveWidgetHandler" FullName="Gladeui.RemoveWidgetHandler">
+  <TypeSignature Language="C#" Value="public delegate void RemoveWidgetHandler(object o, Gladeui.RemoveWidgetArgs args);" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="Gladeui.RemoveWidgetArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">To be added.</param>
+    <param name="args">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

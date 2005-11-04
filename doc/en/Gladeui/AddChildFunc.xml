@@ -1,0 +1,23 @@
+<Type Name="AddChildFunc" FullName="Gladeui.AddChildFunc">
+  <TypeSignature Language="C#" Value="public delegate void AddChildFunc(GLib.Object parent, GLib.Object child);" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="parent" Type="GLib.Object" />
+    <Parameter Name="child" Type="GLib.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="parent">To be added.</param>
+    <param name="child">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

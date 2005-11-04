@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<metadata>
+  <attr path="/api/namespace[@name='Glade']" name="name">Gladeui</attr>
+  <attr path="/api/namespace/object[@cname='GladeApp']/signal[@cname='update-ui']" name="name">UpdateUiEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeFixedManager']/signal[@cname='create-child']" name="name">CreateChildEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeFixedManager']/signal[@cname='remove-child']" name="name">RemoveChildEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeFixedManager']/signal[@cname='add-child']" name="name">AddChildEvent</attr>
+  <attr path="/api/namespace/struct[@cname='GladeSignalEditor']/constructor[@cname='glade_signal_editor_new']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeInterface']" name="opaque">false</attr>
+  <attr path="/api/namespace/struct[@cname='GladeSignalEditor']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeMenuEditor']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeIDAllocator']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeParameter']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeSignal']" name="opaque">false</attr>
+  <attr path="/api/namespace/struct[@cname='GladeSignalInfo']" name="opaque">false</attr>
+  <attr path="/api/namespace/object[@cname='GladeProjectWindow']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeProjectWindowPriv']" name="hidden">1</attr>
+  <attr path="/api/namespace/object[@cname='GladeProperty']/constructor[@cname='glade_property_new']/parameters/parameter[@name='class']" name="name">cls</attr>
+  <attr path="/api/namespace/object[@cname='GladeWidget']/signal[@cname='add_signal_handler']" name="name">AddSignalHandlerEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeWidget']/signal[@cname='remove_signal_handler']" name="name">RemoveSignalHandlerEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeWidget']/signal[@cname='change_signal_handler']" name="name">ChangeSignalHandlerEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeWidget']/method[@cname='glade_widget_get_property']" name="name">GetWidgetProperty</attr>
+  <attr path="/api/namespace/struct[@cname='GladePropertyClass']/constructor[@cname='glade_property_class_new_from_spec']" name="hidden">1</attr>
+  <attr path="/api/namespace/object[@cname='GladeProject']/signal[@cname='widget_name_changed']" name="name">WidgetNameChangedEvent</attr>
+  <attr path="/api/namespace/object[@cname='GladeProject']/signal[@cname='selection_changed']" name="name">SelectionChangedEvent</attr>
+</metadata>

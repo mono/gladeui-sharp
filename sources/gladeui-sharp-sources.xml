@@ -1,0 +1,9 @@
+ <gapi-parser-input>
+  <api filename="gladeui-api.raw">
+    <library name="gladeui-sharp.dll">
+      <namespace name="Glade">
+        <dir>glade-3-2.90.0/src</dir>
+      </namespace>
+    </library>
+  </api>
+ </gapi-parser-input>

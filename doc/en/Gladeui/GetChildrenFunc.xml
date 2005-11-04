@@ -1,0 +1,22 @@
+<Type Name="GetChildrenFunc" FullName="Gladeui.GetChildrenFunc">
+  <TypeSignature Language="C#" Value="public delegate GLib.List GetChildrenFunc(GLib.Object container);" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="container" Type="GLib.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>GLib.List</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="container">To be added.</param>
+    <summary>To be added.</summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

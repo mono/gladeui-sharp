@@ -1,0 +1,18 @@
+Imported to the wrong place.
+--Esta línea y las que están debajo serán ignoradas--
+
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/glue
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/AUTHORS
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/autogen.sh
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/configure.in
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/COPYING
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/doc
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/gladeui
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/gladeui-sparp.pc.in
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/gladeui-sharp.pub
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/gladeui-sharp.snk
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/INSTALL
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/LICENSE.LGPL
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/LICENSE.MPL
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/Makefile.am
+D    svn+ssh://lluis@mono-cvs.ximian.com/source/trunk/sources

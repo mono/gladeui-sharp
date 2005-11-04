@@ -1,0 +1,79 @@
+<Type Name="Popup" FullName="Gladeui.Popup">
+  <TypeSignature Language="C#" Value="public class Popup" />
+  <AssemblyInfo>
+    <AssemblyName>gladeui-sharp</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Popup ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipboardPop">
+      <MemberSignature Language="C#" Value="public static void ClipboardPop (Gladeui.Widget widget, Gdk.EventButton evnt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="widget" Type="Gladeui.Widget" />
+        <Parameter Name="evnt" Type="Gdk.EventButton" />
+      </Parameters>
+      <Docs>
+        <param name="widget">To be added.</param>
+        <param name="evnt">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaceholderPop">
+      <MemberSignature Language="C#" Value="public static void PlaceholderPop (Gladeui.Placeholder placeholder, Gdk.EventButton evnt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="placeholder" Type="Gladeui.Placeholder" />
+        <Parameter Name="evnt" Type="Gdk.EventButton" />
+      </Parameters>
+      <Docs>
+        <param name="placeholder">To be added.</param>
+        <param name="evnt">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidgetPop">
+      <MemberSignature Language="C#" Value="public static void WidgetPop (Gladeui.Widget widget, Gdk.EventButton evnt, bool add_children);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="widget" Type="Gladeui.Widget" />
+        <Parameter Name="evnt" Type="Gdk.EventButton" />
+        <Parameter Name="add_children" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="widget">To be added.</param>
+        <param name="evnt">To be added.</param>
+        <param name="add_children">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

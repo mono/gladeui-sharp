@@ -1,0 +1,97 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="gladeui-sharp" Version="2.0.0.0" />
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="Gladeui">
+      <Type Name="AccelInfo" />
+      <Type Name="AddChildArgs" />
+      <Type Name="AddSignalHandlerArgs" />
+      <Type Name="AddWidgetArgs" />
+      <Type Name="App" />
+      <Type Name="AppPriv" />
+      <Type Name="AtkActionInfo" />
+      <Type Name="AtkRelationInfo" />
+      <Type Name="Catalog" />
+      <Type Name="ChangeSignalHandlerArgs" />
+      <Type Name="ChildCreatedArgs" />
+      <Type Name="ChildInfo" />
+      <Type Name="Clipboard" />
+      <Type Name="ClipboardView" />
+      <Type Name="Command" />
+      <Type Name="ConfigureBeginArgs" />
+      <Type Name="ConfigureChildArgs" />
+      <Type Name="ConfigureEndArgs" />
+      <Type Name="CreateChildArgs" />
+      <Type Name="Cursor" />
+      <Type Name="Editor" />
+      <Type Name="EditorProperty" />
+      <Type Name="EditorTable" />
+      <Type Name="FixedManager" />
+      <Type Name="GCSetPropData" />
+      <Type Name="Global" />
+      <Type Name="Interface" />
+      <Type Name="KeysDialog" />
+      <Type Name="PackingDefault" />
+      <Type Name="Palette" />
+      <Type Name="Parser" />
+      <Type Name="Placeholder" />
+      <Type Name="Popup" />
+      <Type Name="Project" />
+      <Type Name="ProjectView" />
+      <Type Name="ProjectWindow" />
+      <Type Name="ProjectWindowPriv" />
+      <Type Name="PropertyClass" />
+      <Type Name="Property" />
+      <Type Name="PropInfo" />
+      <Type Name="RemoveChildArgs" />
+      <Type Name="RemoveSignalHandlerArgs" />
+      <Type Name="RemoveWidgetArgs" />
+      <Type Name="Signal" />
+      <Type Name="SignalInfo" />
+      <Type Name="Stock" />
+      <Type Name="SupportedChild" />
+      <Type Name="WidgetClass" />
+      <Type Name="WidgetClassSignal" />
+      <Type Name="Widget" />
+      <Type Name="WidgetGroup" />
+      <Type Name="WidgetInfo" />
+      <Type Name="WidgetNameChangedArgs" />
+      <Type Name="XmlContext" />
+      <Type Name="Xml" />
+      <Type Name="XmlDoc" />
+      <Type Name="XmlNode" />
+      <Type Name="AddChildFunc" />
+      <Type Name="AddChildHandler" />
+      <Type Name="AddSignalHandlerHandler" />
+      <Type Name="AddWidgetHandler" />
+      <Type Name="ChangeSignalHandlerHandler" />
+      <Type Name="ChildCreatedHandler" />
+      <Type Name="ChildGetPropertyFunc" />
+      <Type Name="ChildSetPropertyFunc" />
+      <Type Name="ConfigureBeginHandler" />
+      <Type Name="ConfigureChildHandler" />
+      <Type Name="ConfigureEndHandler" />
+      <Type Name="CreateChildHandler" />
+      <Type Name="GetChildrenFunc" />
+      <Type Name="GetInternalFunc" />
+      <Type Name="PostCreateFunc" />
+      <Type Name="RemoveChildFunc" />
+      <Type Name="RemoveChildHandler" />
+      <Type Name="RemoveSignalHandlerHandler" />
+      <Type Name="RemoveWidgetHandler" />
+      <Type Name="WidgetNameChangedHandler" />
+      <Type Name="CreateReason" />
+      <Type Name="CursorType" />
+      <Type Name="EditorTableType" />
+      <Type Name="ProjectViewType" />
+      <Type Name="UtilFileDialogType" />
+    </Namespace>
+    <Namespace Name="GtkSharp.GladeuiSharp">
+      <Type Name="ObjectManager" />
+    </Namespace>
+  </Types>
+  <Title>gladeui-sharp</Title>
+</Overview>
