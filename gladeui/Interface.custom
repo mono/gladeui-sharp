@@ -1,0 +1,10 @@
+
+		public static Interface Create ()
+		{
+			Interface i = new Interface ();
+			gladeuisharp_gladeui_interface_init (ref i);
+			return i;
+		}
+		
+		[DllImport ("libgladeuisharpglue")]
+		extern static IntPtr gladeuisharp_gladeui_interface_init (ref Gladeui.Interface raw);

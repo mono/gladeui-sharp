@@ -1,7 +1,17 @@
 
-	public static Gladeui.Widget FromObject (GLib.Object obj)
-	{
-		IntPtr ptr = ((Gtk.Widget)obj).GetData ("GladeWidgetDataTag");
-		return (Gladeui.Widget) GLib.Object.GetObject (ptr);
-	}
+		public static Gladeui.Widget FromObject (GLib.Object obj)
+		{
+			IntPtr ptr = ((Gtk.Widget)obj).GetData ("GladeWidgetDataTag");
+			return GLib.Object.GetObject (ptr) as Gladeui.Widget;
+		}
 	
+		[DllImport ("libgladeuisharpglue")]
+		extern static IntPtr gladeuisharp_gladeui_widget_get_signals (IntPtr widget, IntPtr name);
+
+		public GLib.List GetSignalsHandlers (string signal_name)
+		{
+			IntPtr signal_name_as_native = GLib.Marshaller.StringToPtrGStrdup (signal_name);
+			IntPtr raw_ret = gladeuisharp_gladeui_widget_get_signals (Handle, signal_name_as_native);
+			GLib.Marshaller.Free (signal_name_as_native);
+			return new GLib.List (raw_ret, typeof(Signal), true, false);
+		}

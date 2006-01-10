@@ -16,13 +16,15 @@ endif
 
 build_sources = AssemblyInfo.cs
 
-customs = App.custom
+customs = App.custom Widget.custom Project.custom WidgetClass.custom
 
 CLEANFILES = gladeui-sharp.dll generated-stamp generated/*.cs $(API) gladeui-sharp.snk
 
 DISTCLEANFILES= AssemblyInfo.cs
 
 noinst_DATA = gladeui-sharp.dll
+
+glue_includes = glade.h
 
 all: generated-stamp gladeui-sharp.dll
 
@@ -32,7 +34,7 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 	$(FIXUP) --api=$(srcdir)/$(API) --metadata=$(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
-	 $(CODEGEN) --generate $(srcdir)/$(API) $(GTK_SHARP_CFLAGS) --outdir=generated --customdir=$(srcdir) --assembly-name=gladeui-sharp && touch generated-stamp
+	 $(CODEGEN) --generate $(srcdir)/$(API) $(GTK_SHARP_CFLAGS) --glue-includes=$(glue_includes) --gluelib-name=libgladeuisharpglue --glue-filename=../glue/glue.c --outdir=generated --customdir=$(srcdir) --assembly-name=gladeui-sharp && touch generated-stamp
 
 gladeui-sharp.snk: $(top_srcdir)/gladeui-sharp.snk
 	cp $(top_srcdir)/gladeui-sharp.snk .

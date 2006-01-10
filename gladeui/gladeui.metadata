@@ -23,4 +23,9 @@
   <attr path="/api/namespace/struct[@cname='GladePropertyClass']/constructor[@cname='glade_property_class_new_from_spec']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@cname='GladeProject']/signal[@cname='widget_name_changed']" name="name">WidgetNameChangedEvent</attr>
   <attr path="/api/namespace/object[@cname='GladeProject']/signal[@cname='selection_changed']" name="name">SelectionChangedEvent</attr>
+  <!-- GAPI fails to generate these fields -->
+  <attr path="/api/namespace/struct[@cname='GladeWidgetClass']/field[@cname='post_create_function']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeWidgetClass']/field[@cname='get_internal_child']" name="hidden">1</attr>
+  <attr path="/api/namespace/struct[@cname='GladeWidgetClass']/field[@cname='signals']" name="name">SignalsInternal</attr>
+  <attr path="/api/namespace/struct[@cname='GladeWidget']/method[@cname='glade_widget_list_signal_handlers']" name="hidden">1</attr>
 </metadata>

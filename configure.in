@@ -1,25 +1,60 @@
 AC_INIT(README)
 AC_CANONICAL_SYSTEM
+AM_CONFIG_HEADER(config.h)
 AM_INIT_AUTOMAKE(gladeui-sharp, 0.10)
 AM_MAINTAINER_MODE
 
 API_VERSION=2.0.0.0
 AC_SUBST(API_VERSION)
 
+case "$host" in
+	*-*-mingw*|*-*-cygwin*)
+		platform_win32=yes
+		AC_DEFINE(PLATFORM_WIN32,1,[Platform is Win32])
+		CC="gcc -mno-cygwin -g"
+		HOST_CC="gcc"
+		;;
+	*)
+		platform_win32=no
+		;;
+esac
+
+AM_CONDITIONAL(PLATFORM_WIN32, test x$platform_win32 = xyes)
+
+AC_CHECK_TOOL(CC, gcc, gcc)
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_PROG_INSTALL
+
+dnl may require a specific autoconf version
+dnl AC_PROG_CC_FOR_BUILD
+dnl CC_FOR_BUILD not automatically detected
+CC_FOR_BUILD=$CC
+BUILD_EXEEXT=
+if test "x$cross_compiling" = "xyes"; then
+	CC_FOR_BUILD=cc
+	BUILD_EXEEXT=""
+fi
+AC_SUBST(CC_FOR_BUILD)
+AC_SUBST(HOST_CC)
+AC_SUBST(BUILD_EXEEXT)
+
+# Set STDC_HEADERS
+AC_HEADER_STDC
+AC_LIBTOOL_WIN32_DLL
+AM_PROG_LIBTOOL
+
+if test x$platform_win32 = xyes; then
+   # Get rid of 'cyg' prefixes in library names
+   sed -e "s/\/cyg\//\/\//" libtool > libtool.new; mv libtool.new libtool; chmod 755 libtool
+fi
+
+# not 64 bit clean in cross-compile
+AC_CHECK_SIZEOF(void *, 4)
+
+CFLAGS='-g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings'
+
 MONO_REQUIRED_VERSION=1.0
-
-AC_MSG_CHECKING([whether we're compiling from CVS])
-if test -f "$srcdir/.cvs_version" ; then
-	from_cvs=yes
-else
-if test -f "$srcdir/.svn" ; then
-	from_cvs=yes
-else
-	from_cvs=no
-fi
-fi
-
-AC_MSG_RESULT($from_cvs)
 
 AC_PATH_PROG(MONO, mono)
 AC_PATH_PROG(MCS, mcs)
@@ -134,6 +169,7 @@ Makefile
 gladeui/gladeui-sharp.dll.config
 gladeui/Makefile
 gladeui/AssemblyInfo.cs
+glue/Makefile
 doc/Makefile
 sources/Makefile
 gladeui-sharp.pc

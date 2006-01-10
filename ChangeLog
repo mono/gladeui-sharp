@@ -1,205 +1,28 @@
-2005-05-14  Ben Maurer  <bmaurer@ximian.com>
+2006-01-10  Lluis Sanchez Gual  <lluis@novell.com>
 
-	* configure.in: Bump for release and tag.
-
-2005-05-13  Ben Maurer  <bmaurer@ximian.com>
-
-	* sample/Makefile.am, configure.in, sample/webshot.in: Remove
-	install of the webshot app. The bin file conflicts with the Gtk#
-	1.0 based version.
-
-	* Makefile.am (pkgconfigdir): Use the $datadir pkgconfig dir. This
-	forces some distros with old pkgconfig's to modify their
-	patch. However, it avoids breaking newer OS's with a new pkgconfig
-	going forward.
-
-2005-05-12  Ben Maurer  <bmaurer@ximian.com>
-
-	* sample/Makefile.am: Correct the install dir, and remove sed
-	stuff.
-
-	* sample/webshot.in: Use prefix/lib, and give the full path to mono.
-
-	* gladeui-sharp-2.0.pc.in: use prefix/lib
-
-	* gtkmozembed/Makefile.am: use GACUTIL_FLAGS
-
-	* configure.in:
-	    - Add GACUTIL_FLAGS with prefix/lib rather than libdir
-	    - sample/webshot is now created by configure
-
-2005-05-09  Mark Crichton  <crichton@gimp.org>
-
-	* gtkmozembed/Makefile.am: added the XML api file to the dist, so
-	the build can go a bit smoother
-
-2005-05-07  Alp Toker  <alp@atoker.com>
-
-	* gtkmozembed/gtkgecko.metadata: The gtk_moz_embed_single_get_type
-	symbol is mangled in some Mozilla builds, so hide it to get things
-	working again after the reparse.
-
-2005-05-06  Mark Crichton  <crichton@gimp.org>
-
-	* gtkmozembed/gtksharp.metadata: Finally get around to fixing
-	signals
-	* gtkmozembed/NewWindow*.cs, Single.custom: Removed, for they
-	are junk now
-	* gtkmozembed/WebControl.custom: Removed more new_window hackery
-	* gtkmozembed/gtkgecko-api.raw: Reparsed Mozilla code
-
-2005-05-01  Mark Crichton  <crichton@gimp.org>
-
-	* Makefile.am:
-	* configure.in: Added code to support using monodoc
-
-2005-04-20  John Luke  <john.luke@gmail.com>
-
-	* gtkmozembed/Makefile.am:
-	* sample/Makefile.am: use compatible compiler switches
-	to avoid warnings with mcs head
-
-2005-03-07  Zac Bowling  <zac@zacbowling.com>
-
-	* configure.in: conditional fix for WIN32
-	* gtkmozembed/gladeui-sharp.dll.config.in: libgtkmozembed.so again 
-	(not versioned)
-	* gtkmozembed/Makefile.am: changed *.config to *.config.in (thanks Chris)
-
-2005-03-07	Christian Hergert	<christian.hergert@gmail.com>
-
-	* configure.in: Add AM_CONDITIONAL for WINBUILD. Still needs to have
-	a configure switch added or some other way of determining WINBUILD. But
-	this allows us to still build.
-
-2005-03-06  Zac Bowling  <zac@zacbowling.com>
-
-	* gtkmozembed/WebControl.custom: typo made backword logic
-
-2005-03-06  Zac Bowling  <zac@zacbowling.com>
-
-	* autogen.sh: Added new in file for autoconf blender
-	* gtkmozembed/gladeui-sharp.dll.config.in: Added for WIN32 dll search
-	* configure.in: updated for building csc and without mono
-	* gtkmozembed/gtkgecko-api.raw: Updated for changes in the api
-	* gtkmozembed/Makefile.am: updated for gapi tool name differences
-	* gtkmozembed/WebControl.custom: added support for buggy profiles
-	* gtkmozembed/gladeui-sharp.dll.config: Removed
-
-2005-03-06  John Luke  <john.luke@gmail.com>
-
-	* gtkmozembed/WebControl.custom: use generated SetProfilePath
-	method to adjust for gtk# changes, fixes build with gtk# HEAD
-	* gtkmozembed/gladeui-sharp.dll.config: change mapping of
-	gtkmozembed.dll to libgtkmozembed.so (not versioned)
-
-2005-03-06  Zac Bowling  <zac@zacbowling.com>
-
-	* gtkmozembed/gladeui-sharp.dll.config: Fixed dll mapping issues. 
-	shouldn't need to make this configured by autoconf like GTK#
-
-2005-02-22  Raja R Harinath  <rharinath@novell.com>
-
-	* gtkmozembed/Makefile.am (sources): Move AssemblyInfo.cs ...
-	(build_sources): ... here.
-	($(API), generated-stamp): Don't look for $(API) in $(srcdir).
-	(EXTRA_DIST): Don't distribute generated file $(API).
-
-2005-02-11  Geoff Norton  <gnorton@customerdna.com>
-
-	* configure.in: Bumped assembly version to 2.0
-	* gladeui-sharp-2.0.pc.in: Added
-	* gladeui-sharp.pc.in: Dropped
-	* Updated gladeui-sharp to gladeui-sharp-2.0 to be consistent with its
-	gtk-sharp-2.0 dep.
+	* gladeui/Makefile.in:
+	* doc/Makefile.in:
+	* svn-commit.tmp:
+	* sources/Makefile.in: Removed.
 	
-2005-02-05  Mark Crichton  <crichton@localhost.localdomain>
-
-	* configure.in: bumped up version to 0.7.  I should become better
-	at this
-	* gtkmozembed/WebControl.custom: fixed to use gtkmozembed.dll
-	for Win32.  Also fixed path seperator differences
-	* gtkmozembed/gtkgecko-api.raw: Fixed .dll naming issue there as well
-	* sources: ...here as well
-
-2005-01-24  Mike Kestner  <mkestner@novell.com>
-
-	* configure.in : add a gapi pkgconfig check. [Fixes #71668]
-
-2005-01-08  Mike Kestner  <mkestner@novell.com>
-
-	* configure.in : AC_SUBST the cflags and libs for Gtk#.
-	* gtkmozembed/Makefile.am : use Gtk# CFLAGS and LIBS in generation and
-	compilation.
-
-2004-11-11  John Luke  <john.luke@gmail.com>
-
-	* COPYING: add this and point it to the other license files
-	otherwise automake sticks a GPL COPYING file in there
-
-2004-10-29  Todd Berman  <tberman@off.net>
-
-	* configure.in: bumping version. someone forgot a commit :)
-
-2004-08-20  Mark Crichton <crichton@gimp.org>
-
-	* gtkmozembed/gtkgecko.metadata: Changed OpenUri to bool 
-        instead of int
-
-2004-06-01  Todd Berman  <tberman@sevenl.net>
-
-	* gtkmozembed/gtkgecko.metadata: hide void ctor.
-
-2004-05-16  Todd Berman  <tberman@sevenl.net>
-
-	* sample/Makefile.am:
-	* gtkmozembed/Makefile.am: update to work with mono from cvs
-
-2004-05-13  Todd Berman  <tberman@sevenl.net>
-
-	* gladeui-sharp.pc.in: make this actually work.
-
-2004-05-05  Todd Berman  <tberman@sevenl.net>
-
-	* configure.in: bump to 0.3
-	* gtkmozembed/Makefile.am: change to gtk-sharp package to fix broken
-	examples and autodetect for now on compilation.
-	* gtkmozembed/gladeui-sharp.dll.config: add config-fu for gladeui-sharp
-	to work properly.
-
-2004-05-01  Mark Crichton  <crichton@gimp.org>
-
-	* gtkmozembed/AssemblyInfo.cs.in: Added some AssemblyInfo stuff
-	for the GAC
-
-2004-04-12  Mike Kestner  <mkestner@ximian.com>
-
-	* gtkmozembed/WebControl.custom : chain to base (IntPtr) on ctors and
-	fix custom base virtual method to use new valuetype GValues api.
-
-2004-03-24  Mark Crichton  <crichton@gimp.org>
+	* autogen.sh:
+	* configure.in: Several fixes.
 	
-	* api: Not used anymore.
-	* gtkmozembed/*: Everything changed around to support new signal
-	handling.  Also moved everything to the Gtk.Gecko class.
-
-2004-03-11  Mark Crichton  <crichton@gimp.org>
-
-	* api/gtkmozmebed-api.xml: Minor changes.
-	* gtkmozmebed/Makefile.am: Use api xml description in api
-
-2003-11-23  John Luke  <jluke@cfl.rr.com>
-
-	* Makefile.am: remove sources from SUBDIRS
-	* autogen.sh: run configure by default
-	* configure.in: no need to output api/Makefile
-	* api/*: no longer used
-	* gtkmozembed/Single.custom: comment out signals temporarily
-	* gtkmozembed/GtkMozEmbed.metadata: add here, and port to XPath style
-	* gtkmozembed/Makefile.am: update to use gapi-fixup
-		and generate the sources
-	* sources/GtkMozEmbed.metadata: remove
-	* sources/Makefile.am: run gapi-parser unconditionally
-	* sources/gtkmozembed-sharp-sources.xml: add sources file
-	* sources/gtkmozembed-sharp.sources: remove
+	* glue/Makefile.am: Added c glue files.
+	* glue/glue.c: Updated.
+	* gladeui/Makefile.am: Added some .custom files.
 	
+	* Makefile.am: Added glue directory.
+
+	* gladeui/gladeui.metadata: Removed some fields from
+	the generation.
+	
+	* gladeui/Widget.custom: Implemented GetSignalsHandlers.
+	
+	* glue/widget.c:
+	* gladeui/gladeui-sharp.snk: Added
+	* gladeui/Project.custom:
+	* gladeui/WidgetClass.custom:
+	* gladeui/AssemblyInfo.cs:
+	* gladeui/gladeui-sharp.dll.config:
+	* gladeui/Interface.custom: Added.

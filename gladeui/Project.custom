@@ -1,0 +1,29 @@
+
+		[DllImport ("libgladeuisharpglue")]
+		extern static IntPtr gladeuisharp_gladeui_project_get_objects (IntPtr project);
+
+		public GLib.List Objects {
+			get {
+				IntPtr raw_ret = gladeuisharp_gladeui_project_get_objects (Handle);
+				return new GLib.List (raw_ret, typeof(Gladeui.Widget), false, false);
+			}
+		}
+
+		[DllImport ("libgladeuisharpglue")]
+		extern static IntPtr gladeuisharp_gladeui_project_get_path (IntPtr project);
+		
+		public string Path {
+			get {
+				IntPtr raw_ret = gladeuisharp_gladeui_project_get_path (Handle);
+				return GLib.Marshaller.Utf8PtrToString (raw_ret);
+			}
+		}
+
+		[DllImport ("libgladeuisharpglue")]
+		extern static bool gladeuisharp_gladeui_project_get_modified (IntPtr project);
+		
+		public bool Modified {
+			get {
+				return gladeuisharp_gladeui_project_get_modified (Handle);
+			}
+		}

@@ -1,0 +1,15 @@
+
+		public GLib.List Signals {
+			get {
+				unsafe {
+					IntPtr* raw_ptr = (IntPtr*)(((byte*)Handle) + signals_offset);
+					return new GLib.List((*raw_ptr), typeof(Gladeui.WidgetClassSignal));
+				}
+			}
+			set {
+				unsafe {
+					IntPtr* raw_ptr = (IntPtr*)(((byte*)Handle) + signals_offset);
+					*raw_ptr = value.Handle;
+				}
+			}
+		}

@@ -1,13 +1,10 @@
 lib_LTLIBRARIES = libgladeuisharpglue.la
 
-BASESOURCES = \
-	glue.c		\
-	#
+libgladeuisharpglue_la_SOURCES = \
+	glue.c \
+	widget.c
 
-libgladeuisharpglue_la_LDFLAGS = -module -avoid-version
-
-libgladeuisharpglue_la_SOURCES = 	\
-	$(BASESOURCES) 
+libgladeuisharpglue_la_LDFLAGS = -module -avoid-version -no-undefined
 
 libgladeuisharpglue_la_LIBADD = $(BASE_DEPENDENCIES_LIBS) $(GLADEUI_LIBS)
 
